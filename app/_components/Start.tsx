@@ -27,8 +27,8 @@ export default function Start() {
     return (
         <div className=" w-full relative flex flex-row">
             <div className=" justify-start pl-20 w-full flex p-15 bg-[url(/Picture.webp)] ">
-                <div ref={textRef} className="py-30 gap-10 flex flex-col opacity-0 translate-y-6 transition-all ease-out">
-                    <p className="text-3xl md:text-5xl"> لورم ایپسوم متن ggggساختگی </p>
+                <div ref={textRef} className="py-30  gap-10 flex flex-col opacity-0 translate-y-6 transition-all ease-out">
+                    <p className="text-3xl md:text-5xl text-white"> gggggg </p>
                     <div className="w-2/3 md:w-1/2 text-sm md:text-lg"><p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است  </p></div>
                     <div className="group relative">
                         <div className="group-hover: absolute bg-white h-full w-0"></div>

@@ -18,3 +18,5 @@ yarn-debug.log*
 yarn-error.log*
 .pnp.*
 .pnpm-store/
+.next/trace
+.next/trace

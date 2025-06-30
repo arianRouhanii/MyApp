@@ -58,8 +58,8 @@ export default function Promo() {
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <div className="text-gray-400 gap-5 flex relative  flex-col">
-                                        <div className='absolute right-0 bottom-[10%] text-8xl text-gray-700'>66</div>
-                                        <p className='z-10'> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
+                                        <div className='absolute right-0 bottom-[10%] text-8xl '>66</div>
+                                        <p className='z-10'> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه  و مجله در ستون و سطرآنچنان که لازم است </p>
                                         <div className="flex z-10 flex-row gap-5" dir='ltr'>
                                             <div className="rounded-full w-10 h-10 bg-white"></div>
                                             <div >

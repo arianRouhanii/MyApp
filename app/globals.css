@@ -6,7 +6,6 @@
 }
 
 *{
-    color: white;
     transition-duration: 400ms;
 }
 @media (prefers-color-scheme: dark) {

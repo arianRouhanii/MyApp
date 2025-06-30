@@ -6,7 +6,7 @@ export default function Footer() {
             <div className="absolute top-0  h-full w-[1px] bg-gray-500 lg:left-1/3 left-1/6"></div>
             <div className="absolute top-0  h-full w-[1px] bg-gray-500 lg:left-2/3 left-5/6"></div>
             <div className="absolute top-0  h-full w-[1px] bg-gray-500 hidden lg:flex right-14"></div>
-            <div className="w-full px-16 flex flex-row text-end gap-10">
+            <div className="w-full text-white px-16 flex flex-row text-end gap-10">
                 <div className="w-1/3 py-5 flex flex-col gap-1">
                     <p className="text-blue-400"> :شماره تلفن </p>
                     <p>+123456789</p>
@@ -21,7 +21,7 @@ export default function Footer() {
                 </div>
             </div>
             <hr className="text-gray-500"/>
-            <div className="w-full px-16  flex flex-row justify-between">
+            <div className="w-full text-white px-16  flex flex-row justify-between">
                 <p>@Copyright 2025 Almubdieun</p>
                 <div className="flex flex-row gap-2">
                 <button className="rounded-full w-9 h-9 border border-gray-500 justify-center items-center flex "><Image alt="" width={30} height={30} src={"/facebook.svg"}></Image></button>

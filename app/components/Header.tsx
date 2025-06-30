@@ -1,7 +1,7 @@
 import Link from "next/link"
 export default function Header() {
     return (
-        <div>
+        <div className="text-white">
             <div className="hidden lg:flex z-50 absolute flex-row w-full">
                 <div className="w-4/5 gap-10 flex flex-row-reverse justify-end m-14 items-center">
                     <button className="text-blue-400"> خانه </button>

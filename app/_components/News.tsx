@@ -11,7 +11,7 @@ export default function News() {
             <div className="absolute top-0  h-full w-[1px] bg-gray-500 lg:left-2/3 left-5/6"></div>
             <div className="absolute top-0  h-full w-[1px] bg-gray-500 hidden lg:flex right-14"></div>
             <div className="flex flex-col text-sm gap-10 text-end">
-                <h2 className="text-4xl"><span className="text-blue-400"> اخبار </span> جاری </h2>
+                <h2 className="text-4xl text-white"><span className="text-blue-400"> اخبار </span> جاری </h2>
             </div>
             <div className="swiper-container">
                 <div className="swiper-wrapper ">
@@ -24,7 +24,7 @@ export default function News() {
                         }}
                         modules={[Pagination]}
                         loop={true}
-                        className="mySwiper w-full "
+                        className="mySwiper text-white w-full "
                         dir="rtl"
                     >
                         <SwiperSlide>

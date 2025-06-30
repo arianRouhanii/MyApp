@@ -7,14 +7,14 @@ export default function Promo() {
     return (
         <div>
             <div className="bg-fixed flex p-15 bg-[url(/Picture.webp)] ">
-                <div className="">
+                <div className="text-white">
                     <button className="rounded-full flex justify-center hover:opacity-70 items-center w-25 h-25 text-4xl bg-blue-400">&#9655;</button>
                     <p className="text-xl mb-30 mt-2"> مشاهده ویدیوی تبلیغاتی </p>
                 </div>
             </div>
             <div className="relative ">
                 <div className="-bottom-15 gap-5 flex flex-col p-10 h-[400px]  right-15 absolute bg-gray-800  w-[35%]">
-                    <p className="text-xl text-end"> مشتریان چه می گویند؟ </p>
+                    <p className="text-xl text-end text-white"> مشتریان چه می گویند؟ </p>
                     <hr className="text-gray-400" />
                     <div className="swiper-container">
                         <div className="swiper-wrapper ">
@@ -32,7 +32,7 @@ export default function Promo() {
                             >
                                 <SwiperSlide>
                                     <div className="text-gray-400 gap-5 flex relative  flex-col">
-                                        <div className='absolute right-0 bottom-[10%] text-8xl text-gray-700'>66</div>
+                                        <div className='absolute right-0 bottom-[10%] text-8xl text-gray-700'>60</div>
                                         <p className='z-10'> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
                                         <div className="flex z-10 flex-row gap-5" dir='ltr'>
                                             <div className="rounded-full w-10 h-10 bg-white"></div>
@@ -45,7 +45,7 @@ export default function Promo() {
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <div className="text-gray-400 gap-5 flex relative  flex-col">
-                                        <div className='absolute right-0 bottom-[10%] text-8xl text-gray-700'>66</div>
+                                        <div className='absolute right-0 bottom-[10%] text-8xl text-gray-700'>70</div>
                                         <p className='z-10'> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
                                         <div className="flex z-10 flex-row gap-5 " dir='ltr'>
                                             <div className="rounded-full w-10 h-10 bg-white"></div>
@@ -58,7 +58,7 @@ export default function Promo() {
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <div className="text-gray-400 gap-5 flex relative  flex-col">
-                                        <div className='absolute right-0 bottom-[10%] text-8xl '>66</div>
+                                        <div className='absolute right-0 bottom-[10%] text-8xl '>80</div>
                                         <p className='z-10'> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه  و مجله در ستون و سطرآنچنان که لازم است </p>
                                         <div className="flex z-10 flex-row gap-5" dir='ltr'>
                                             <div className="rounded-full w-10 h-10 bg-white"></div>

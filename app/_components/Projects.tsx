@@ -6,12 +6,12 @@ import { Pagination } from 'swiper/modules';
 export default function Projects() {
     return (
 
-        <div className="bg-gray-800 relative gap-10 flex flex-col py-20 px-3 lg:px-16 w-full">
+        <div className="bg-[#272727] relative gap-10 flex flex-col py-20 px-3 lg:px-16 xl:px-96 w-full">
 
-            <div className="absolute top-0  h-full w-[1px] bg-gray-500 hidden lg:flex left-14"></div>
-            <div className="absolute top-0  h-full w-[1px] bg-gray-500 lg:left-1/3 left-1/6"></div>
-            <div className="absolute top-0  h-full w-[1px] bg-gray-500 lg:left-2/3 left-5/6"></div>
-            <div className="absolute top-0  h-full w-[1px] bg-gray-500 hidden lg:flex right-14"></div>
+            <div className="absolute top-0  h-full w-[1px] bg-gray-700 hidden lg:flex left-14 xl:left-1/6"></div>
+            <div className="absolute top-0  h-full w-[1px] bg-gray-700 lg:left-1/3 left-1/6"></div>
+            <div className="absolute top-0  h-full w-[1px] bg-gray-700 lg:left-2/3 left-5/6"></div>
+            <div className="absolute top-0  h-full w-[1px] bg-gray-700 hidden lg:flex right-14 xl:left-5/6"></div>
             <div className="flex flex-col text-sm text-end gap-10 ">
                 <h2 className="z-10 text-4xl text-white">  <span className="text-blue-400"> پروژه </span> های ما</h2>
             </div>
@@ -33,22 +33,24 @@ export default function Projects() {
                             <div className="w-full z-10 flex flex-row gap-10">
                                 <div className="group">
                                     <div className="overflow-hidden  bg-black" >
-                                        <Image className="group-hover:opacity-60 group-hover:scale-110 " alt="" width={1000} height={1000} src={"/Picture.webp"}></Image>
+                                        <Image className="group-hover:opacity-60 group-hover:scale-110 " alt="" width={1000} height={1000} src={"/1.png"}></Image>
                                     </div>
-                                    <div className="relative group-hover:bottom-40 bottom-20 gap-2 items-center flex flex-col">
-                                        <p> لورم  </p>
+                                    <div className="relative group-hover:bottom-40 bottom-25 gap-2 items-center flex flex-col ">
+                                        <p className="text-blue-400"> لورم  </p>
                                         <p className="text-2xl"> لورم ایپسوم </p>
-                                        <div className="w-1/6 group-hover:w-[90%] h-[1px] bg-white"></div>
+                                        <div className="w-1/6 group-hover:w-[90%] h-[1px] bg-gray-400"></div>
+                                        <div className="opacity-0 group-hover:opacity-100 text-2xl hover:text-blue-400 " >&lArr;</div>
                                     </div>
                                 </div>
                                 <div className="group">
                                     <div className="overflow-hidden  bg-black" >
-                                        <Image className="group-hover:opacity-60 group-hover:scale-110 " alt="" width={1000} height={1000} src={"/Picture.webp"}></Image>
+                                        <Image className="group-hover:opacity-60 group-hover:scale-110 " alt="" width={1000} height={1000} src={"/2.png"}></Image>
                                     </div>
-                                    <div className="relative group-hover:bottom-40 bottom-20 gap-2 items-center flex flex-col">
-                                        <p> لورم  </p>
+                                    <div className="relative group-hover:bottom-40 bottom-25 gap-2 items-center flex flex-col ">
+                                        <p className="text-blue-400"> لورم  </p>
                                         <p className="text-2xl"> لورم ایپسوم </p>
-                                        <div className="w-1/6 group-hover:w-[90%] h-[1px] bg-white"></div>
+                                        <div className="w-1/6 group-hover:w-[90%] h-[1px] bg-gray-400"></div>
+                                        <div className="opacity-0 group-hover:opacity-100 text-2xl hover:text-blue-400 " >&lArr;</div>
                                     </div>
                                 </div>
                             </div>
@@ -57,22 +59,24 @@ export default function Projects() {
                             <div className="w-full z-10 flex flex-row gap-10">
                                 <div className="group">
                                     <div className="overflow-hidden  bg-black" >
-                                        <Image className="group-hover:opacity-60 group-hover:scale-110 " alt="" width={1000} height={1000} src={"/Picture.webp"}></Image>
+                                        <Image className="group-hover:opacity-60 group-hover:scale-110 " alt="" width={1000} height={1000} src={"/1.png"}></Image>
                                     </div>
-                                    <div className="relative group-hover:bottom-40 bottom-20 gap-2 items-center flex flex-col">
-                                        <p> لورم  </p>
+                                    <div className="relative group-hover:bottom-40 bottom-25 gap-2 items-center flex flex-col ">
+                                        <p className="text-blue-400"> لورم  </p>
                                         <p className="text-2xl"> لورم ایپسوم </p>
-                                        <div className="w-1/6 group-hover:w-[90%] h-[1px] bg-white"></div>
+                                        <div className="w-1/6 group-hover:w-[90%] h-[1px] bg-gray-400"></div>
+                                        <div className="opacity-0 group-hover:opacity-100 text-2xl hover:text-blue-400 " >&lArr;</div>
                                     </div>
                                 </div>
                                 <div className="group">
                                     <div className="overflow-hidden  bg-black" >
-                                        <Image className="group-hover:opacity-60 group-hover:scale-110 " alt="" width={1000} height={1000} src={"/Picture.webp"}></Image>
+                                        <Image className="group-hover:opacity-60 group-hover:scale-110 " alt="" width={1000} height={1000} src={"/2.png"}></Image>
                                     </div>
-                                    <div className="relative group-hover:bottom-40 bottom-20 gap-2 items-center flex flex-col">
-                                        <p> لورم  </p>
+                                    <div className="relative group-hover:bottom-40 bottom-25 gap-2 items-center flex flex-col ">
+                                        <p className="text-blue-400"> لورم  </p>
                                         <p className="text-2xl"> لورم ایپسوم </p>
-                                        <div className="w-1/6 group-hover:w-[90%] h-[1px] bg-white"></div>
+                                        <div className="w-1/6 group-hover:w-[90%] h-[1px] bg-gray-400"></div>
+                                        <div className="opacity-0 group-hover:opacity-100 text-2xl hover:text-blue-400 " >&lArr;</div>
                                     </div>
                                 </div>
                             </div>
@@ -99,12 +103,13 @@ export default function Projects() {
                             <div className="w-full z-10 flex flex-row gap-10">
                                 <div className="group">
                                     <div className="overflow-hidden  bg-black" >
-                                        <Image className="group-hover:opacity-60 group-hover:scale-110 " alt="" width={1000} height={1000} src={"/Picture.webp"}></Image>
+                                        <Image className="group-hover:opacity-60 group-hover:scale-110 " alt="" width={1000} height={1000} src={"/1.png"}></Image>
                                     </div>
-                                    <div className="relative group-hover:bottom-40 bottom-20 gap-2 items-center flex flex-col">
-                                        <p> لورم  </p>
+                                    <div className="relative group-hover:bottom-40 bottom-25 gap-2 items-center flex flex-col ">
+                                        <p className="text-blue-400"> لورم  </p>
                                         <p className="text-2xl"> لورم ایپسوم </p>
-                                        <div className="w-1/6 group-hover:w-[90%] h-[1px] bg-white"></div>
+                                        <div className="w-1/6 group-hover:w-[90%] h-[1px] bg-gray-400"></div>
+                                        <div className="opacity-0 group-hover:opacity-100 text-2xl hover:text-blue-400 " >&lArr;</div>
                                     </div>
                                 </div>
                             </div>
@@ -113,12 +118,13 @@ export default function Projects() {
                             <div className="w-full z-10 flex flex-row gap-10">
                                 <div className="group">
                                     <div className="overflow-hidden  bg-black" >
-                                        <Image className="group-hover:opacity-60 group-hover:scale-110 " alt="" width={1000} height={1000} src={"/Picture.webp"}></Image>
+                                        <Image className="group-hover:opacity-60 group-hover:scale-110 " alt="" width={1000} height={1000} src={"/2.png"}></Image>
                                     </div>
-                                    <div className="relative group-hover:bottom-40 bottom-20 gap-2 items-center flex flex-col">
-                                        <p> لورم  </p>
+                                    <div className="relative group-hover:bottom-40 bottom-25 gap-2 items-center flex flex-col ">
+                                        <p className="text-blue-400"> لورم  </p>
                                         <p className="text-2xl"> لورم ایپسوم </p>
-                                        <div className="w-1/6 group-hover:w-[90%] h-[1px] bg-white"></div>
+                                        <div className="w-1/6 group-hover:w-[90%] h-[1px] bg-gray-400"></div>
+                                        <div className="opacity-0 group-hover:opacity-100 text-2xl hover:text-blue-400 " >&lArr;</div>
                                     </div>
                                 </div>
                             </div>
@@ -127,12 +133,13 @@ export default function Projects() {
                             <div className="w-full z-10 flex flex-row gap-10">
                                 <div className="group">
                                     <div className="overflow-hidden  bg-black" >
-                                        <Image className="group-hover:opacity-60 group-hover:scale-110 " alt="" width={1000} height={1000} src={"/Picture.webp"}></Image>
+                                        <Image className="group-hover:opacity-60 group-hover:scale-110 " alt="" width={1000} height={1000} src={"/1.png"}></Image>
                                     </div>
-                                    <div className="relative group-hover:bottom-40 bottom-20 gap-2 items-center flex flex-col">
-                                        <p> لورم  </p>
+                                    <div className="relative group-hover:bottom-40 bottom-25 gap-2 items-center flex flex-col ">
+                                        <p className="text-blue-400"> لورم  </p>
                                         <p className="text-2xl"> لورم ایپسوم </p>
-                                        <div className="w-1/6 group-hover:w-[90%] h-[1px] bg-white"></div>
+                                        <div className="w-1/6 group-hover:w-[90%] h-[1px] bg-gray-400"></div>
+                                        <div className="opacity-0 group-hover:opacity-100 text-2xl hover:text-blue-400 " >&lArr;</div>
                                     </div>
                                 </div>
                             </div>
@@ -141,12 +148,13 @@ export default function Projects() {
                             <div className="w-full z-10 flex flex-row gap-10">
                                 <div className="group">
                                     <div className="overflow-hidden  bg-black" >
-                                        <Image className="group-hover:opacity-60 group-hover:scale-110 " alt="" width={1000} height={1000} src={"/Picture.webp"}></Image>
+                                        <Image className="group-hover:opacity-60 group-hover:scale-110 " alt="" width={1000} height={1000} src={"/2.png"}></Image>
                                     </div>
-                                    <div className="relative group-hover:bottom-40 bottom-20 gap-2 items-center flex flex-col">
-                                        <p> لورم  </p>
+                                    <div className="relative group-hover:bottom-40 bottom-25 gap-2 items-center flex flex-col ">
+                                        <p className="text-blue-400"> لورم  </p>
                                         <p className="text-2xl"> لورم ایپسوم </p>
-                                        <div className="w-1/6 group-hover:w-[90%] h-[1px] bg-white"></div>
+                                        <div className="w-1/6 group-hover:w-[90%] h-[1px] bg-gray-400"></div>
+                                        <div className="opacity-0 group-hover:opacity-100 text-2xl hover:text-blue-400 " >&lArr;</div>
                                     </div>
                                 </div>
                             </div>

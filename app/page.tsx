@@ -1,5 +1,8 @@
 'use client'
-import Header from "./components/Header"
+import dynamic from 'next/dynamic';
+const Header = dynamic(() => import('./components/Header'), {
+  ssr: false,
+});
 import Start from "./_components/Start"
 import About from "./_components/About"
 import Projects from "./_components/Projects"

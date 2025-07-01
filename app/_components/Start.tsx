@@ -1,5 +1,8 @@
 import { useRef, useEffect, useState } from "react"
 import Image from "next/image";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import { Autoplay } from 'swiper/modules';
 export default function Start() {
     const textRef = useRef<HTMLHeadingElement>(null);
     useEffect(() => {
@@ -9,7 +12,7 @@ export default function Start() {
         }
     }, []);
 
-    const [offset, setOffset] = useState(314); 
+    const [offset, setOffset] = useState(314);
 
     useEffect(() => {
         const onScroll = () => {
@@ -23,25 +26,60 @@ export default function Start() {
         window.addEventListener('scroll', onScroll);
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
-
     return (
-        <div className=" w-full relative flex flex-row">
-            <div className=" justify-start pl-20 w-full flex p-15 bg-[url(/1.png)] ">
-                <div ref={textRef} className="py-30 text-white gap-10 flex flex-col opacity-0 translate-y-6 transition-all ease-out">
-                    <p className="text-3xl md:text-5xl"> salam </p>
-                    <div className="w-2/3 md:w-1/2 text-sm md:text-lg"><p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است  </p></div>
-                    <div className="group relative">
-                        <div className="group-hover: absolute bg-white h-full w-0"></div>
-                        <button  id="mainbtn" className="mainbtn boder  border-[1px] border-white py-2 px-4">BUY NOW </button>
-                        </div>
+        <div className="w-full h-[100vh] flex flex-row">
+            <div className="relative swiper-container w-full lg:w-[92%]">
+                <div className="swiper-wrapper ">
+                    <Swiper
+                        navigation={true}
+                        loop={true}
+                        modules={[ Autoplay]}
+                        autoplay={{
+                            delay: 7000,
+                            disableOnInteraction: false,
+                        }}
+                        className="mySwiper">
+                        <SwiperSlide className="px-10 xl:px-56 py-30 w-1/2 flex justify-end items-end flex-col bg-[url(/start1.png)] ">
+                            <div className="py-30 text-black  gap-10 flex flex-col  " dir="rtl">
+                                <p className="w-full xl:w-2/3 text-3xl md:text-5xl">
+                                    قبل از تصمیم‌گیری، آنلاین استعلام بگیرید، با اطمینان خاطر خرید کنید و باقی کار را به ما بسپارید
+                                </p>
+                                <div className="w-full xl:w-1/2 text-sm md:text-lg">
+                                    <p>
+                                        در رافد، ما به شفافیت و رضایت شما اهمیت می‌دهیم. می‌دانیم که انتخاب آسانسور یا پله برقی مناسب برای پروژه شما یک تصمیم مهم است. به همین دلیل، شما را تشویق می‌کنیم تا ابتدا به صورت آنلاین استعلام قیمت بگیرید و مقایسه کنید. پس از آنکه با اطمینان کامل از انتخاب خود مطمئن شدید، با خیالی آسوده اجرا و نصب را به تیم متخصص ما بسپارید. ما کیفیت، ایمنی و آرامش خاطر را برای شما تضمین می‌کنیم
+                                    </p>
+                                </div>
+                                <div className="group flex relative xl:w-2/3">
+                                    <div className="group-hover: absolute bg-black h-full w-0"></div>
+                                    <button id="mainbtn" className="mainbtn boder hover:bg-black hover:text-blue-400 border-[1px] text-2xl border-black py-4 px-10 "> استعلام آنلاین </button>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide className="px-10 xl:px-56 py-30 flex justify-center items-center flex-col bg-[url(/start2.png)]">
+                            <div className="py-30 text-black gap-10 flex flex-col  " dir="rtl">
+                                <p className="w-full xl:w-2/3 text-3xl md:text-5xl">
+                                    قبل از تصمیم‌گیری، آنلاین استعلام بگیرید، با اطمینان خاطر خرید کنید و باقی کار را به ما بسپارید
+                                </p>
+                                <div className="w-full xl:w-1/2 text-sm md:text-lg">
+                                    <p>
+                                        در رافد، ما به شفافیت و رضایت شما اهمیت می‌دهیم. می‌دانیم که انتخاب آسانسور یا پله برقی مناسب برای پروژه شما یک تصمیم مهم است. به همین دلیل، شما را تشویق می‌کنیم تا ابتدا به صورت آنلاین استعلام قیمت بگیرید و مقایسه کنید. پس از آنکه با اطمینان کامل از انتخاب خود مطمئن شدید، با خیالی آسوده اجرا و نصب را به تیم متخصص ما بسپارید. ما کیفیت، ایمنی و آرامش خاطر را برای شما تضمین می‌کنیم
+                                    </p>
+                                </div>
+                                <div className="group flex relative xl:w-2/3">
+                                    <div className="group-hover: absolute bg-black h-full w-0"></div>
+                                    <button id="mainbtn" className="mainbtn boder hover:bg-black hover:text-blue-400 border-[1px] text-2xl border-black py-4 px-10"> استعلام آنلاین </button>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
                 </div>
             </div>
-            <div className="hidden  w-32 justify-end lg:flex flex-col items-center pb-3 gap-2 bg-gray-800">
-                <div className="w-[1px] h-16 bg-gray-500"></div>
-                <button className="rounded-full w-9 h-9 border border-gray-500 justify-center items-center flex "><Image alt="" width={30} height={30} src={"/facebook.svg"}></Image></button>
-                <button className="rounded-full w-9 h-9 border border-gray-500 justify-center items-center flex "><Image alt="" width={20} height={20} src={"/instagram.svg"}></Image></button>
-                <button className="rounded-full w-9 h-9 border border-gray-500 justify-center items-center flex "><Image alt="" width={20} height={20} src={"/x.svg"}></Image></button>
-                <button className="rounded-full w-9 h-9 border border-gray-500 justify-center items-center flex "><Image alt="" width={30} height={30} src={"/telegram.svg"}></Image></button>
+            <div className="hidden lg:w-[8%] justify-end lg:flex flex-col items-center pb-3 gap-2 bg-[#272727]">
+                <div className="w-[1px] h-16 bg-gray-700"></div>
+                <button className="rounded-full w-9 h-9 border border-gray-500 hover:border-blue-400 justify-center items-center flex "><Image alt="" width={30} height={30} src={"/facebook.svg"}></Image></button>
+                <button className="rounded-full w-9 h-9 border border-gray-500 hover:border-blue-400 justify-center items-center flex "><Image alt="" width={20} height={20} src={"/instagram.svg"}></Image></button>
+                <button className="rounded-full w-9 h-9 border border-gray-500 hover:border-blue-400 justify-center items-center flex "><Image alt="" width={20} height={20} src={"/x.svg"}></Image></button>
+                <button className="rounded-full w-9 h-9 border border-gray-500 hover:border-blue-400 justify-center items-center flex "><Image alt="" width={30} height={30} src={"/telegram.svg"}></Image></button>
             </div>
 
 

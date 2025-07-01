@@ -5,9 +5,12 @@
   --foreground: #171717;
 }
 
-*{
-    transition-duration: 400ms;
+
+@font-face {
+  font-family: "IranSans";
+  src: url("/fonts/IRANSansWeb.woff") format("woff");
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -15,29 +18,54 @@
   }
 }
 
+* {
+  transition-duration: 400ms;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font: var(--font-IranSans);
+  font-family: "IranSans", sans-serif;
 }
-html{
+
+html {
   scroll-behavior: smooth;
 }
-button{
+
+button {
   cursor: pointer;
 }
 
 
-.swiper-wrapper{
-    padding-bottom: 50px;
+.swiper-wrapper {
+  padding-bottom: 50px;
 }
-.swiper-pagination-bullet{
-  background-color: white !important ;
+
+.swiper-pagination-bullet {
+  background-color: white !important;
 }
-.swiper-slide{
+
+.swiper-slide {
   cursor: pointer;
 }
 
 ::-webkit-scrollbar {
   width: 0px;
+}
+
+.close {
+  right: 150%;
+}
+
+.open {
+  left: 0%;
+}
+
+.bat {
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
 }

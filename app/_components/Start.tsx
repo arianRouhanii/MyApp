@@ -39,7 +39,7 @@ export default function Start() {
                             disableOnInteraction: false,
                         }}
                         className="mySwiper">
-                        <SwiperSlide className="px-10 xl:px-56 py-30 w-1/2 flex justify-end items-end flex-col bg-[url(/start1.png)] ">
+                        <SwiperSlide className="px-10 2xl:px-56 py-30 w-1/2 flex justify-end items-end flex-col bg-[url(/start1.png)] ">
                             <div className="py-0 md:py-30 text-black  gap-10 flex flex-col  " dir="rtl">
                                 <p className="w-full xl:w-2/3 text-3xl md:text-5xl">
                                     قبل از تصمیم‌گیری، آنلاین استعلام بگیرید، با اطمینان خاطر خرید کنید و باقی کار را به ما بسپارید
@@ -57,7 +57,7 @@ export default function Start() {
                                 </div>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide className="px-10 xl:px-56 py-30 flex justify-center items-center flex-col bg-[url(/start2.png)]">
+                        <SwiperSlide className="px-10 2xl:px-56 py-30 flex justify-center items-center flex-col bg-[url(/start2.png)]">
                             <div className="py-0 md:py-30 text-black gap-10 flex flex-col  " dir="rtl">
                                 <p className="w-full xl:w-2/3 text-3xl md:text-5xl">
                                     قبل از تصمیم‌گیری، آنلاین استعلام بگیرید، با اطمینان خاطر خرید کنید و باقی کار را به ما بسپارید

@@ -153,8 +153,8 @@ export default function Header() {
                     <button className="text-start"> ارتباط با ما </button>
                 </div>
             </div>
-            <div className="hidden group lg:flex z-50 xl:fixed absolute flex-row bottom-0 w-full xl:ml-0 xl:h-[50vh] xl:w-1/5">
-                <div className=" h-full top-1/6 w-[10vh] hidden xl:flex">
+            <div className="hidden group lg:flex z-50 2xl:fixed absolute flex-row 2xl:bottom-5 w-full xl:ml-0 2xl:h-[50vh] 2xl:w-1/5">
+                <div className=" h-full top-1/6 w-[10vh] hidden 2xl:flex">
                     <div id="elevator" className="w-full flex items-center justify-center h-[16.6667%]">
                         <svg fill="#000000" width="40" height="40" viewBox="0 0 64 64" className="fill-blue-400">
 
@@ -171,14 +171,14 @@ export default function Header() {
                         </svg>
                     </div>
                 </div>
-                <div className="w-4/5 xl:w-[20vh]  xl:text-white text-black  gap-10 flex flex-row-reverse justify-end xl:justify-evenly m-14 xl:m-0  text-lg xl:text-xl xl:flex-col xl:h-full items-center xl:items-start">
-                    <button id="floor1" className="hover:text-blue-400 text-shadow-lg/90"> خانه </button>
-                    <button id="floor2" className="hover:text-blue-400 text-shadow-lg/90"> درباره ما </button>
-                    <button id="floor3" className="hover:text-blue-400 text-shadow-lg/90"> پروژه های ما </button>
-                    <button id="floor4" className="hover:text-blue-400 text-shadow-lg/90"> سرویس های ما </button>
-                    <button id="floor5" className="hover:text-blue-400 text-shadow-lg/90"> اخبار جاری </button>
-                    <button id="floor6" className="hover:text-blue-400 text-shadow-lg/90"> ارتباط با ما </button>
-                    <div className="border-black border-t flex  border-l aspect-square h-full xl:hidden"></div>
+                <div className="w-4/5 2xl:w-[20vh]  2xl:text-white text-black  gap-10 flex flex-row-reverse justify-end 2xl:justify-evenly m-14 2xl:m-0  text-lg 2xl:text-xl 2xl:flex-col 2xl:h-full items-center 2xl:items-start">
+                    <button id="floor1" className="hover:text-blue-400 2xl:text-shadow-lg/90"> خانه </button>
+                    <button id="floor2" className="hover:text-blue-400 2xl:text-shadow-lg/90"> درباره ما </button>
+                    <button id="floor3" className="hover:text-blue-400 2xl:text-shadow-lg/90"> پروژه های ما </button>
+                    <button id="floor4" className="hover:text-blue-400 2xl:text-shadow-lg/90"> سرویس های ما </button>
+                    <button id="floor5" className="hover:text-blue-400 2xl:text-shadow-lg/90"> اخبار جاری </button>
+                    <button id="floor6" className="hover:text-blue-400 2xl:text-shadow-lg/90"> ارتباط با ما </button>
+                    <div className="border-black border-t flex  border-l aspect-square h-full 2xl:hidden"></div>
                 </div>
                 <div className="w-1/5 bg-[#272727] text-white h-44 flex justify-center items-center text-4xl xl:hidden" ><Link href={""}>LOGO</Link></div>
             </div>

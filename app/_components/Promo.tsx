@@ -7,9 +7,9 @@ import Image from 'next/image';
 export default function Promo() {
     return (
         <div>
-            <div className="lg:bg-fixed gap-10 flex lg:flex-row flex-col p-3 lg:p-15  bg-[url(/fixedbg.jpg)] ">
+            <div className="lg:bg-fixed gap-10 flex lg:flex-row flex-col p-3 lg:p-15 xl:px-96  bg-[url(/fixedbg.jpg)] ">
                 <div className="text-white lg:p-0 p-3">
-                    <button className="rounded-full flex justify-center hover:opacity-70 items-center w-25 h-25 text-4xl bg-blue-400"><p>&#9655;</p></button>
+                    <button className="rounded-full flex justify-center hover:opacity-70 items-center pt-2 pl-1 w-25 h-25 text-4xl bg-blue-400"><p>&#9655;</p></button>
                     <p className="text-xl lg:mb-30 mt-2 text-blue-400"> مشاهده ویدیوی تبلیغاتی </p>
                 </div>
                 <div className=" w-full lg:hidden flex">
@@ -77,7 +77,7 @@ export default function Promo() {
                 </div>
             </div>
             <div className="relative  hidden lg:flex">
-                <div className="-bottom-15 gap-5 flex flex-col p-10 h-[400px]  right-15 lg:absolute bg-[#272727] mx-3  lg:w-[35%]">
+                <div className="-bottom-15 gap-5 flex flex-col p-10 h-[400px]  right-15 xl:right-96 z-10 lg:absolute bg-[#272727] mx-3  lg:w-[35%]">
                     <p className="text-xl text-end text-white"> مشتریان چه می گویند؟ </p>
                     <hr className="text-gray-400" />
                     <div className="swiper-container">

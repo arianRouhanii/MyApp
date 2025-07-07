@@ -7,7 +7,7 @@ export default function About() {
             <div className="absolute top-0  h-full w-[1px] bg-gray-700 lg:left-2/3 left-5/6"></div>
             <div className="absolute top-0  h-full w-[1px] bg-gray-700 hidden lg:flex right-14 xl:left-5/6"></div>
             <div className="w-full md:w-1/2 flex flex-col justify-end relative">
-                <div className="border-[1px] hidden md:flex absolute  top-4 z-10  w-full h-[90%] left-5 border-gray-500"> </div>
+                <div className="border-[1px] hidden md:flex absolute  top-4 z-10  w-full h-[90%] left-5 border-gray-700"> </div>
                 <div className="relative z-10"><Image className=" hover:scale-95 " alt="" width={1000} height={1000} src={"/about.png"}></Image></div>
                 <div className="relative z-10 bottom-5 flex flex-row justify-start pl-5"><p className="inline-block bg-blue-500 px-8 py-4 text-white  text-sm justify-end">دفتر تهران</p></div>
             </div>

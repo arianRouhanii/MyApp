@@ -68,4 +68,38 @@ button {
     1px -1px 0 white,
     -1px 1px 0 white,
     1px 1px 0 white;
+    
+}
+
+.f1 {
+  position: relative;
+  top: -3%;
+}
+
+.f2 {
+  position: relative;
+  top: 15%;
+}
+
+.f3 {
+  position: relative;
+  top: 33.3333%;
+}
+
+.f4 {
+  position: relative;
+  top: 49.5%;
+}
+
+.f5 {
+  position: relative;
+  top: 68%;
+}
+
+.f6 {
+  position: relative;
+  top: 84.5%;
+}
+.coch {
+  color: #50A2FF;
 }

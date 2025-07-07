@@ -1,4 +1,4 @@
-import Image from "next/image"
+
 export default function Footer() {
     return (
         <div className="bg-[#272727] relative text-sm gap-10 flex flex-col pt-20 pb-5 w-full">

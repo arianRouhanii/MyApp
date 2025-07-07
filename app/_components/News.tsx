@@ -11,7 +11,7 @@ export default function News() {
             <div className="absolute top-0  h-full w-[1px] bg-gray-700 lg:left-2/3 left-5/6"></div>
             <div className="absolute top-0  h-full w-[1px] bg-gray-700 hidden lg:flex right-14 xl:left-5/6"></div>
             <div className="flex flex-col text-sm gap-10 text-end">
-                <h2 className="text-4xl text-white"><span className="text-blue-400"> اخبار </span> جاری </h2>
+                <h2 className="text-4xl text-white z-10"><span className="text-blue-400"> اخبار </span> جاری </h2>
             </div>
             <div className="hidden md:flex swiper-container">
                 <div className="swiper-wrapper ">

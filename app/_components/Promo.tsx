@@ -139,7 +139,7 @@ export default function Promo() {
                     </div>
                 </div>
             </div>
-            <div className="bottom-0 pl-15 bg-[#303030] h-[100px] w-full">
+            <div className="bottom-0 md:pl-15 bg-[#303030] h-[100px] w-full">
                 <div className="swiper-container lg:w-[55%]">
                     <div className="swiper-wrapper ">
                         <Swiper

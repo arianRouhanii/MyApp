@@ -40,7 +40,7 @@ export default function Start() {
                         }}
                         className="mySwiper">
                         <SwiperSlide className="px-10 xl:px-56 py-30 w-1/2 flex justify-end items-end flex-col bg-[url(/start1.png)] ">
-                            <div className="py-30 text-black  gap-10 flex flex-col  " dir="rtl">
+                            <div className="py-0 md:py-30 text-black  gap-10 flex flex-col  " dir="rtl">
                                 <p className="w-full xl:w-2/3 text-3xl md:text-5xl">
                                     قبل از تصمیم‌گیری، آنلاین استعلام بگیرید، با اطمینان خاطر خرید کنید و باقی کار را به ما بسپارید
                                 </p>
@@ -50,7 +50,7 @@ export default function Start() {
                                     </p>
                                 </div>
                                 <div className=" flex xl:w-2/3">
-                                    <button className="group relative boder hover:bg-black hover:text-blue-400 border-[1px] w-1/3 md:w-1/4 h-[60px] md:text-2xl border-black ">
+                                    <button className="group relative boder hover:bg-black hover:text-blue-400 border-[1px] w-1/2 md:w-1/4 h-[60px] md:text-2xl border-black ">
                                         <p> استعلام آنلاین </p>
                                         <div className="group-hover:w-full absolute group top-0 opacity-30  bg-black h-full  w-0 group-hover:Py-4 group-hover:px-10"></div>
                                     </button>
@@ -58,7 +58,7 @@ export default function Start() {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className="px-10 xl:px-56 py-30 flex justify-center items-center flex-col bg-[url(/start2.png)]">
-                            <div className="py-30 text-black gap-10 flex flex-col  " dir="rtl">
+                            <div className="py-0 md:py-30 text-black gap-10 flex flex-col  " dir="rtl">
                                 <p className="w-full xl:w-2/3 text-3xl md:text-5xl">
                                     قبل از تصمیم‌گیری، آنلاین استعلام بگیرید، با اطمینان خاطر خرید کنید و باقی کار را به ما بسپارید
                                 </p>
@@ -68,7 +68,7 @@ export default function Start() {
                                     </p>
                                 </div>
                                 <div className=" flex xl:w-2/3">
-                                    <button className="group relative boder hover:bg-black hover:text-blue-400 border-[1px] w-1/3 md:w-1/4 h-[60px] md:text-2xl border-black ">
+                                    <button className="group relative boder hover:bg-black hover:text-blue-400 border-[1px] w-1/2 md:w-1/4 h-[60px] md:text-2xl border-black ">
                                         <p> استعلام آنلاین </p>
                                         <div className="group-hover:w-full absolute group top-0 opacity-30  bg-black h-full  w-0 group-hover:Py-4 group-hover:px-10"></div>
                                     </button>

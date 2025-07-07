@@ -9,7 +9,7 @@ export default function Service() {
             <div className="flex flex-col text-end text-sm gap-10 ">
                 <h2 className="z-10 text-4xl text-white">  <span className="text-blue-400"> سرویس </span> های ما</h2>
             </div>
-            <div className="text-white w-full flex flex-col md:flex-row-reverse gap-10">
+            <div className="text-white w-full flex flex-col z-10 md:flex-row-reverse gap-10">
                 <div className="group md:w-1/3 hover:bg-gray-700 p-5 flex flex-col justify-between gap-5">
                     <div className="flex flex-col gap-5" dir="rtl">
                         <div className="w-10 h-10"><Image alt="" src={'/elevator.png'} width={1000} height={1000}></Image></div>

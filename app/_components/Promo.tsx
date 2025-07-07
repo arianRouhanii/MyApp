@@ -112,7 +112,7 @@ export default function Promo() {
                                         <div className='absolute right-0 bottom-[10%] text-8xl text-[#303030]'>66</div>
                                         <p className='z-10'> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
                                         <div className="flex z-10 flex-row gap-5 " dir='ltr'>
-                                            <div className="rounded-full w-10 h-10 overflow-hidden"><Image src={"/profile1.jpg"} alt='' height={1000} width={1000}></Image></div>
+                                            <div className="rounded-full w-10 h-10 overflow-hidden"><Image src={"/profile2.jpg"} alt='' height={1000} width={1000}></Image></div>
                                             <div>
                                                 <p className="text-blue-400">Jason brown</p>
                                                 <p>Plaza owner</p>
@@ -125,7 +125,7 @@ export default function Promo() {
                                         <div className='absolute right-0 bottom-[10%] text-8xl text-[#303030]'>66</div>
                                         <p className='z-10'> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه  و مجله در ستون و سطرآنچنان که لازم است </p>
                                         <div className="flex z-10 flex-row gap-5" dir='ltr'>
-                                            <div className="rounded-full w-10 h-10 overflow-hidden"><Image src={"/profile1.jpg"} alt='' height={1000} width={1000}></Image></div>
+                                            <div className="rounded-full w-10 h-10 overflow-hidden"><Image src={"/profile3.jpg"} alt='' height={1000} width={1000}></Image></div>
                                             <div >
                                                 <p className="text-blue-400">Jason brown</p>
                                                 <p>Plaza owner</p>

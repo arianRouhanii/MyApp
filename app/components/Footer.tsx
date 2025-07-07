@@ -6,7 +6,7 @@ export default function Footer() {
             <div className="absolute top-0  h-full w-[1px] bg-gray-700 lg:left-1/3 left-1/6"></div>
             <div className="absolute top-0  h-full w-[1px] bg-gray-700 lg:left-2/3 left-5/6"></div>
             <div className="absolute top-0  h-full w-[1px] bg-gray-700 hidden lg:flex right-14 xl:left-5/6"></div>
-            <div className="w-full text-white px-3 z-10 lg:px-16 2xl:px-96 flex flex-col md:flex-row text-end gap-10">
+            <div className="w-full text-white px-3 z-10 lg:px-16 2xl:px-96 flex flex-col md:flex-row text-end md:gap-10">
                 <div className="md:w-1/3 py-5 flex flex-col gap-1">
                     <p className="text-blue-400"> :شماره تلفن </p>
                     <p>+123456789</p>

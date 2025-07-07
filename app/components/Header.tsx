@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Link from "next/link"
+import Image from "next/image";
 export default function Header() {
     useEffect(() => {
         const onPageLoad = () => {
@@ -153,7 +154,7 @@ export default function Header() {
                     <button className="text-start"> ارتباط با ما </button>
                 </div>
             </div>
-            <div className="hidden group lg:flex z-50 2xl:fixed absolute flex-row 2xl:bottom-5 w-full xl:ml-0 2xl:h-[50vh] 2xl:w-1/5">
+            <div className="hidden group lg:flex z-50 2xl:fixed absolute flex-row 2xl:top-5 w-full xl:ml-0 2xl:h-[50vh] 2xl:w-1/5">
                 <div className=" h-full top-1/6 w-[10vh] hidden 2xl:flex">
                     <div id="elevator" className="w-full flex items-center justify-center h-[16.6667%]">
                         <svg fill="#000000" width="40" height="40" viewBox="0 0 64 64" className="fill-blue-400">
@@ -180,11 +181,11 @@ export default function Header() {
                     <button id="floor6" className="hover:text-blue-400 2xl:text-shadow-lg/90"> ارتباط با ما </button>
                     <div className="border-black border-t flex  border-l aspect-square h-full 2xl:hidden"></div>
                 </div>
-                <div className="w-1/5 bg-[#272727] text-white h-44 flex justify-center items-center text-4xl xl:hidden" ><Link href={""}>LOGO</Link></div>
+                <div className="w-1/5 bg-[#272727] text-white flex justify-center items-center  p-5 xl:hidden" ><Link href={""} ><Image src={'/RafedLogo.png'} alt="Rafed" width={1000} height={1000}></Image></Link></div>
             </div>
             <div className="flex lg:hidden z-40 px-3 py-5 fixed bg-[#272727] flex-row w-full">
                 <div className="w-full gap-10 flex flex-row-reverse justify-between items-center">
-                    <div className="flex justify-center items-center text-white text-4xl" ><Link href={""}>LOGO</Link></div>
+                    <div className="flex justify-center items-center text-white text-4xl  w-1/3" ><Link href={""}><Image src={'/RafedLogo.png'} alt="Rafed" width={1000} height={1000}></Image></Link></div>
                     <div className="flex justify-center h-10 w-10 items-center" >
                         <button id="listbtn" className="h-[60%] w-[60%] aspect-square flex flex-col justify-between">
                             <div className="w-1/2 h-[4px] bg-white"></div>

@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react"
 import Link from "next/link";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
@@ -79,7 +80,7 @@ export default function Start() {
                 </div>
             </div>
             <div className="hidden lg:w-[8%] justify-end lg:flex flex-col items-center xl:justify-between pb-3 gap-2 bg-[#272727]">
-                <div className="text-white w-full justify-center hidden xl:flex h-1/5 items-center text-4xl"><Link href={""}>LOGO</Link></div>
+                <div className="text-white w-full justify-center hidden xl:flex h-1/5 items-center p-5 text-4xl"><Link href={""} ><Image src={'/RafedLogo.png'} alt="Rafed" width={1000} height={1000}></Image></Link></div>
                 <div className="pb-3 gap-2 flex flex-col items-center">
                     <div className="w-[1px] h-16 bg-gray-700"></div>
                     <button className="rounded-full w-9 h-9  hover:border-blue-400 justify-center items-center flex ">

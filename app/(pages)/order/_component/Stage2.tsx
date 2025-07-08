@@ -1,7 +1,9 @@
 "use client"
 import { useRef, useEffect } from "react"
-interface Stage2Props{
-    setPageState:(page:number)=> void;
+import Link from "next/link";
+import Image from "next/image";
+interface Stage2Props {
+    setPageState: (page: number) => void;
 }
 export default function Stage2({ setPageState }: Stage2Props) {
     const selectRef = useRef<HTMLSelectElement>(null)
@@ -107,22 +109,28 @@ export default function Stage2({ setPageState }: Stage2Props) {
         updateSelectColor10();
     }, [])
     return (
-        <form className="2xl:h-[100vh] bg-[#EAEAEA] text-xl p-16" dir="rtl">
-            <div className="gap-10 h-full w-full justify-between flex flex-col">
-                <div className="w-full flex flex-col gap-5">
-                    <h2 className="text-2xl"> مرحله 2 </h2>
-                    <p> لطفا نوع قطعات را انتخاب کنید </p>
+        <form className="2xl:h-[100vh] bg-[#EAEAEA] text-xl" dir="rtl">
+            <div className="bg-blue-400 gap-8 text-white flex flex-col-reverse justify-center px-16 h-[10vh] md:h-[30vh]">
+                <p className="hidden md:flex">
+                    در رافد، ما به شفافیت و رضایت شما اهمیت می‌دهیم. می‌دانیم که انتخاب آسانسور یا پله برقی مناسب برای پروژه شما یک تصمیم مهم است. به همین دلیل، شما را تشویق می‌کنیم تا ابتدا به صورت آنلاین استعلام قیمت بگیرید و مقایسه کنید. پس از آنکه با اطمینان کامل از انتخاب خود مطمئن شدید، با خیالی آسوده اجرا و نصب را به تیم متخصص ما بسپارید. ما کیفیت، ایمنی و آرامش خاطر را برای شما تضمین می‌کنیم
+                </p>
+                <div className=" w-1/4 md:w-1/12 "><Link href={".."}><Image src={'/RafedLogo.png'} alt="Rafed" width={1000} height={1000}></Image></Link></div>
+            </div>
+            <div className="gap-10 px-16 justify-center w-full flex flex-col">
+                <div className="w-full h-[70vh] flex flex-col gap-5">
+                    <h2 className="text-2xl font-bold text-blue-400"> مرحله 2 </h2>
+                    <p> لطفا نوع قطعات را انتخاب کنید. </p>
                     <div className="flex flex-col xl:flex-row gap-5 xl:gap-30">
-                        <p> *در انتخاب قطعات به رنگ روبرو آنها توجه کنید </p>
+                        <p className="border-y p-1"> در انتخاب قطعات به رنگ روبرو آنها توجه کنید. </p>
                         <div className="flex flex-row gap-15 xl:gap-30">
-                            <div className="flex flex-row-reverse gap-3">
+                            <div className="flex flex-row-reverse w-[120px] justify-center border border-green-500 rounded-full py-1 px-3 gap-3">
                                 <p className="text-green-500">&#9679;</p><p> اقتصادی </p>
                             </div>
-                            <div className="flex flex-row-reverse gap-3">
+                            <div className="flex flex-row-reverse w-[120px] justify-center border border-blue-500 rounded-full py-1 px-3 gap-3">
                                 <p className="text-blue-500">&#9679;</p><p> مرغوب </p>
                             </div>
-                            <div className="flex flex-row-reverse gap-3">
-                                <p className="text-orange-500 ">&#9679;</p><p> لوکس </p>
+                            <div className="flex flex-row-reverse w-[120px] justify-center border border-orange-500 rounded-full py-1 px-3 gap-3">
+                                <p className="text-orange-500">&#9679;</p><p> لوکس </p>
                             </div>
                         </div>
                     </div>
@@ -132,7 +140,7 @@ export default function Stage2({ setPageState }: Stage2Props) {
                                 <div className="flex flex-col gap-3">
                                     <label htmlFor="standard-select"> موتور </label>
                                     <div className="select">
-                                        <select id="color-select" dir="ltr" className="bg-gray-100 outline-0 border w-[300px] rounded-md p-1" ref={selectRef} onChange={updateSelectColor}>
+                                        <select id="color-select" dir="ltr" className="bg-gray-100 border-blue-400 outline-0 border w-[300px] rounded-md p-1" ref={selectRef} onChange={updateSelectColor}>
                                             <option className="text-black" style={{ color: 'black' }}> </option>
                                             <option className="text-orange-500" style={{ color: 'orange' }}>  &#9679; موتور  </option>
                                             <option className="text-blue-500" style={{ color: 'blue' }}> &#9679; موتور </option>
@@ -144,7 +152,7 @@ export default function Stage2({ setPageState }: Stage2Props) {
                                 <div className="flex flex-col gap-3">
                                     <label htmlFor="standard-select"> کابین و تزیینات کابین </label>
                                     <div className="select">
-                                        <select id="color-select" dir="ltr" className="bg-gray-100 outline-0 border w-[300px] rounded-md p-1" ref={selectRef2} onChange={updateSelectColor2}>
+                                        <select id="color-select" dir="ltr" className="bg-gray-100 border-blue-400 outline-0 border w-[300px] rounded-md p-1" ref={selectRef2} onChange={updateSelectColor2}>
                                             <option className="text-black" style={{ color: 'black' }}>  </option>
                                             <option className="text-orange-500" style={{ color: 'orange' }}>  &#9679; 2  </option>
                                             <option className="text-blue-500" style={{ color: 'blue' }}> &#9679; 3 </option>
@@ -156,7 +164,7 @@ export default function Stage2({ setPageState }: Stage2Props) {
                                 <div className="flex flex-col gap-3">
                                     <label htmlFor="standard-select"> نوع ریل </label>
                                     <div className="select">
-                                        <select id="color-select" dir="ltr" className="bg-gray-100 outline-0 border w-[300px] rounded-md p-1" ref={selectRef3} onChange={updateSelectColor3}>
+                                        <select id="color-select" dir="ltr" className="bg-gray-100 border-blue-400 outline-0 border w-[300px] rounded-md p-1" ref={selectRef3} onChange={updateSelectColor3}>
                                             <option className="text-black" style={{ color: 'black' }}> </option>
                                             <option className="text-orange-500" style={{ color: 'orange' }}>  &#9679; 1  </option>
                                             <option className="text-blue-500" style={{ color: 'blue' }}> &#9679; 2 </option>
@@ -168,7 +176,7 @@ export default function Stage2({ setPageState }: Stage2Props) {
                                 <div className="flex flex-col gap-3">
                                     <label htmlFor="standard-select"> نوع درب طبقات </label>
                                     <div className="select">
-                                        <select id="color-select" dir="ltr" className="bg-gray-100 outline-0 border w-[300px] rounded-md p-1" ref={selectRef4} onChange={updateSelectColor4}>
+                                        <select id="color-select" dir="ltr" className="bg-gray-100 border-blue-400 outline-0 border w-[300px] rounded-md p-1" ref={selectRef4} onChange={updateSelectColor4}>
                                             <option className="text-black" style={{ color: 'black' }}> </option>
                                             <option className="text-orange-500" style={{ color: 'orange' }}>  &#9679; 1  </option>
                                             <option className="text-blue-500" style={{ color: 'blue' }}> &#9679; 2 </option>
@@ -180,7 +188,7 @@ export default function Stage2({ setPageState }: Stage2Props) {
                                 <div className="flex flex-col gap-3">
                                     <label htmlFor="standard-select"> نوع سیم بکسل </label>
                                     <div className="select">
-                                        <select id="color-select" dir="ltr" className="bg-gray-100 outline-0 border w-[300px] rounded-md p-1" ref={selectRef5} onChange={updateSelectColor5}>
+                                        <select id="color-select" dir="ltr" className="bg-gray-100 border-blue-400 outline-0 border w-[300px] rounded-md p-1" ref={selectRef5} onChange={updateSelectColor5}>
                                             <option className="text-black" style={{ color: 'black' }}> </option>
                                             <option className="text-orange-500" style={{ color: 'orange' }}>  &#9679; 1  </option>
                                             <option className="text-blue-500" style={{ color: 'blue' }}> &#9679; 2 </option>
@@ -195,7 +203,7 @@ export default function Stage2({ setPageState }: Stage2Props) {
                                 <div className="flex flex-col gap-3">
                                     <label htmlFor="standard-select"> موتور </label>
                                     <div className="select">
-                                        <select id="color-select" dir="ltr" className="bg-gray-100 outline-0 border w-[300px] rounded-md p-1" ref={selectRef6} onChange={updateSelectColor6}>
+                                        <select id="color-select" dir="ltr" className="bg-gray-100 border-blue-400 outline-0 border w-[300px] rounded-md p-1" ref={selectRef6} onChange={updateSelectColor6}>
                                             <option className="text-black" style={{ color: 'black' }}> </option>
                                             <option className="text-orange-500" style={{ color: 'orange' }}>  &#9679; موتور  </option>
                                             <option className="text-blue-500" style={{ color: 'blue' }}> &#9679; موتور </option>
@@ -207,7 +215,7 @@ export default function Stage2({ setPageState }: Stage2Props) {
                                 <div className="flex flex-col gap-3">
                                     <label htmlFor="standard-select"> موتور </label>
                                     <div className="select">
-                                        <select id="color-select" dir="ltr" className="bg-gray-100 outline-0 border w-[300px] rounded-md p-1" ref={selectRef7} onChange={updateSelectColor7}>
+                                        <select id="color-select" dir="ltr" className="bg-gray-100 border-blue-400 outline-0 border w-[300px] rounded-md p-1" ref={selectRef7} onChange={updateSelectColor7}>
                                             <option className="text-black" style={{ color: 'black' }}> </option>
                                             <option className="text-orange-500" style={{ color: 'orange' }}>  &#9679; موتور  </option>
                                             <option className="text-blue-500" style={{ color: 'blue' }}> &#9679; موتور </option>
@@ -219,7 +227,7 @@ export default function Stage2({ setPageState }: Stage2Props) {
                                 <div className="flex flex-col gap-3">
                                     <label htmlFor="standard-select"> موتور </label>
                                     <div className="select">
-                                        <select id="color-select" dir="ltr" className="bg-gray-100 outline-0 border w-[300px] rounded-md p-1" ref={selectRef8} onChange={updateSelectColor8}>
+                                        <select id="color-select" dir="ltr" className="bg-gray-100 border-blue-400 outline-0 border w-[300px] rounded-md p-1" ref={selectRef8} onChange={updateSelectColor8}>
                                             <option className="text-black" style={{ color: 'black' }}> </option>
                                             <option className="text-orange-500" style={{ color: 'orange' }}>  &#9679; موتور  </option>
                                             <option className="text-blue-500" style={{ color: 'blue' }}> &#9679; موتور </option>
@@ -231,7 +239,7 @@ export default function Stage2({ setPageState }: Stage2Props) {
                                 <div className="flex flex-col gap-3">
                                     <label htmlFor="standard-select"> موتور </label>
                                     <div className="select">
-                                        <select id="color-select" dir="ltr" className="bg-gray-100 outline-0 border w-[300px] rounded-md p-1" ref={selectRef9} onChange={updateSelectColor9}>
+                                        <select id="color-select" dir="ltr" className="bg-gray-100 border-blue-400 outline-0 border w-[300px] rounded-md p-1" ref={selectRef9} onChange={updateSelectColor9}>
                                             <option className="text-black" style={{ color: 'black' }}> </option>
                                             <option className="text-orange-500" style={{ color: 'orange' }}>  &#9679; موتور  </option>
                                             <option className="text-blue-500" style={{ color: 'blue' }}> &#9679; موتور </option>
@@ -243,7 +251,7 @@ export default function Stage2({ setPageState }: Stage2Props) {
                                 <div className="flex flex-col gap-3">
                                     <label htmlFor="standard-select"> موتور </label>
                                     <div className="select">
-                                        <select id="color-select" dir="ltr" className="bg-gray-100 outline-0 border w-[300px] rounded-md p-1" ref={selectRef10} onChange={updateSelectColor10}>
+                                        <select id="color-select" dir="ltr" className="bg-gray-100 border-blue-400 outline-0 border w-[300px] rounded-md p-1" ref={selectRef10} onChange={updateSelectColor10}>
                                             <option className="text-black" style={{ color: 'black' }}> </option>
                                             <option className="text-orange-500" style={{ color: 'orange' }}>  &#9679; موتور  </option>
                                             <option className="text-blue-500" style={{ color: 'blue' }}> &#9679; موتور </option>
@@ -255,7 +263,7 @@ export default function Stage2({ setPageState }: Stage2Props) {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col h-[20vh] gap-5">
                     <div>
                         <button type="submit" onClick={() => setPageState(3)} className="rounded-full relative flex flex-row justify-center bg-blue-400 hover:bg-blue-500 text-white p-2 cursor-pointer w-[200px]" >
                             <p className="text-center"> بعدی </p>

@@ -70,6 +70,14 @@ button {
     1px 1px 0 white;
     
 }
+.headbtn {
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+    
+}
 
 .f1 {
   position: relative;

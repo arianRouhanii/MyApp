@@ -1,5 +1,7 @@
-
-export default function Stage1({ setPageState }: any) {
+interface Stage1Props{
+    setPageState:(page:number)=> void;
+}
+export default function Stage1({ setPageState }: Stage1Props) {
     return (
         <form className="2xl:h-[100vh] bg-[#EAEAEA] text-xl p-16" dir="rtl">
             <div className="gap-10 h-full justify-between flex flex-col">

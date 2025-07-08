@@ -1,5 +1,8 @@
 import React, { useState } from "react"
-export default function Stage3({ setPageState }: any) {
+interface Stage3Props{
+    setPageState:(page:number)=> void;
+}
+export default function Stage3({ setPageState }: Stage3Props) {
     const [phoneNumber, setPhoneNumber]= useState('')
     const handleInputChange=(e:React.ChangeEvent<HTMLInputElement>)=> {
         const numericValue = e.target.value.replace(/[^0-9]/g,'')

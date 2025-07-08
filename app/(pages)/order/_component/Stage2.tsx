@@ -1,6 +1,9 @@
 "use client"
 import { useRef, useEffect } from "react"
-export default function Stage2({ setPageState }: any) {
+interface Stage2Props{
+    setPageState:(page:number)=> void;
+}
+export default function Stage2({ setPageState }: Stage2Props) {
     const selectRef = useRef<HTMLSelectElement>(null)
     const updateSelectColor = () => {
         if (selectRef.current) {

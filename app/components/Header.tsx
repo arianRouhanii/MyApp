@@ -172,7 +172,7 @@ export default function Header() {
                         </svg>
                     </div>
                 </div>
-                <div className="w-4/5 2xl:w-[20vh]  2xl:text-white text-black  gap-10 flex flex-row-reverse justify-end 2xl:justify-evenly m-14 2xl:m-0  text-lg 2xl:text-xl 2xl:flex-col 2xl:h-full items-center 2xl:items-start">
+                <div className="w-4/5 2xl:w-[20vh]  2xl:text-white text-white  gap-10 flex flex-row-reverse justify-end 2xl:justify-evenly m-14 2xl:m-0  text-lg 2xl:text-xl 2xl:flex-col 2xl:h-full items-center 2xl:items-start">
                     <button id="floor1" className="hover:text-blue-400 headbtn"> خانه </button>
                     <button id="floor2" className="hover:text-blue-400 headbtn"> درباره ما </button>
                     <button id="floor3" className="hover:text-blue-400 headbtn"> پروژه های ما </button>

@@ -4,26 +4,26 @@ interface Stage1Props {
 export default function Homm({ setPageState }: Stage1Props) {
     return (
         <div className=" w-full gap-5 md:gap-10 2xl:mx-30 flex flex-col">
-            <h2 className="text-4xl">خوش آمدید</h2>
+            <h2 className="text-xl font-bold md:text-4xl">خوش آمدید</h2>
             <div className="w-full flex flex-col md:flex-row gap-3 md:gap-10 lg:gap-20">
                 <div className="w-full md:w-1/2 flex flex-row gap-3 md:gap-10 lg:gap-20">
                     <div className="bg-blue-200 justify-between md:justify-evenly flex flex-row md:flex-col p-2 md:p-0 items-center w-1/2 md:aspect-square rounded-lg">
                         <p className="text-xl 2xl:text-2xl"> بازدید سایت </p>
-                        <p className="text-2xl 2xl:text-4xl"> 12 </p>
+                        <p className="text-xl md:text-2xl 2xl:text-4xl"> 12 </p>
                     </div>
                     <div className="bg-blue-200 justify-between md:justify-evenly flex flex-row md:flex-col p-2 md:p-0 items-center w-1/2 md:aspect-square rounded-lg">
                         <p className="text-xl 2xl:text-2xl"> بازدید استعلام </p>
-                        <p className="text-2xl 2xl:text-4xl"> 5 </p>
+                        <p className="text-xl md:text-2xl 2xl:text-4xl"> 5 </p>
                     </div>
                 </div>
                 <div className="w-full md:w-1/2 flex flex-row gap-3 md:gap-10 lg:gap-20">
                     <div className="bg-blue-200 justify-between md:justify-evenly flex flex-row md:flex-col p-2 md:p-0 items-center w-1/2 md:aspect-square rounded-lg">
                         <p className="text-xl 2xl:text-2xl"> قیمت دلار </p>
-                        <p className="text-2xl 2xl:text-4xl"> 92,300 </p>
+                        <p className="text-xl md:text-2xl 2xl:text-4xl"> 92,300 </p>
                     </div>
                     <div className="bg-blue-200 justify-between md:justify-evenly flex flex-row md:flex-col p-2 md:p-0 items-center w-1/2 md:aspect-square rounded-lg">
                         <p className="text-xl 2xl:text-2xl"> امروز </p>
-                        <p className="text-2xl 2xl:text-4xl"> 1404/6/3 </p>
+                        <p className="text-xl md:text-2xl 2xl:text-4xl"> 1404/6/3 </p>
                     </div>
                 </div>
             </div>

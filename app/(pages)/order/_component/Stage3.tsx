@@ -19,26 +19,26 @@ export default function Stage3({ setPageState }: Stage3Props) {
                             <div className=" flex flex-col w-full 2xl:flex-row gap-10">
                                 <div className="flex flex-col gap-3">
                                     <label htmlFor="standard-select"> موتور </label>
-                                    <input type="text" disabled id="standard-select" value={'🟢 مثال '} dir="ltr" className="bg-gray-400 text-black border-blue-400 outline-0 border w-full md:w-[300px] rounded-md p-1" />
+                                    <input type="text" disabled id="standard-select" value={'🟢 مثال '} dir="ltr" className="bg-gray-200 text-black border-blue-400 outline-0 border w-full md:w-[300px] rounded-md p-1" />
                                 </div>
                                 <div className="flex flex-col gap-3">
                                     <label htmlFor="standard-select"> کابین و تزیینات کابین </label>
-                                    <input type="text" disabled id="standard-select" value={'🟢 مثال '} dir="ltr" className="bg-gray-400 text-black border-blue-400 outline-0 border w-full md:w-[300px] rounded-md p-1" />
+                                    <input type="text" disabled id="standard-select" value={'🟢 مثال '} dir="ltr" className="bg-gray-200 text-black border-blue-400 outline-0 border w-full md:w-[300px] rounded-md p-1" />
                                 </div>
 
                                 <div className="flex flex-col gap-3">
                                     <label htmlFor="standard-select"> نوع ریل </label>
-                                    <input type="text" disabled id="standard-select" value={'🟢 مثال '} dir="ltr" className="bg-gray-400 text-black border-blue-400 outline-0 border w-full md:w-[300px] rounded-md p-1" />
+                                    <input type="text" disabled id="standard-select" value={'🟢 مثال '} dir="ltr" className="bg-gray-200 text-black border-blue-400 outline-0 border w-full md:w-[300px] rounded-md p-1" />
                                 </div>
 
                                 <div className="flex flex-col gap-3">
                                     <label htmlFor="standard-select"> نوع درب طبقات </label>
-                                    <input type="text" disabled id="standard-select" value={'🟢 مثال '} dir="ltr" className="bg-gray-400 text-black border-blue-400 outline-0 border w-full md:w-[300px] rounded-md p-1" />
+                                    <input type="text" disabled id="standard-select" value={'🟢 مثال '} dir="ltr" className="bg-gray-200 text-black border-blue-400 outline-0 border w-full md:w-[300px] rounded-md p-1" />
                                 </div>
 
                                 <div className="flex flex-col gap-3">
                                     <label htmlFor="standard-select"> نوع سیم بکسل </label>
-                                    <input type="text" disabled id="standard-select" value={'🟢 مثال '} dir="ltr" className="bg-gray-400 text-black border-blue-400 outline-0 border w-full md:w-[300px] rounded-md p-1" />
+                                    <input type="text" disabled id="standard-select" value={'🟢 مثال '} dir="ltr" className="bg-gray-200 text-black border-blue-400 outline-0 border w-full md:w-[300px] rounded-md p-1" />
                                 </div>
                             </div>
                         </div>
@@ -46,27 +46,27 @@ export default function Stage3({ setPageState }: Stage3Props) {
                             <div className=" flex flex-col 2xl:flex-row w-full gap-10">
                                 <div className="flex flex-col gap-3">
                                     <label htmlFor="standard-select"> موتور </label>
-                                    <input type="text" disabled id="standard-select" value={'🔴 مثال '} dir="ltr" className="bg-gray-400 text-black border-blue-400 outline-0 border w-full md:w-[300px] rounded-md p-1" />
+                                    <input type="text" disabled id="standard-select" value={'🔴 مثال '} dir="ltr" className="bg-gray-200 text-black border-blue-400 outline-0 border w-full md:w-[300px] rounded-md p-1" />
                                 </div>
 
                                 <div className="flex flex-col gap-3">
                                     <label htmlFor="standard-select"> موتور </label>
-                                    <input type="text" disabled id="standard-select" value={'🔴 مثال '} dir="ltr" className="bg-gray-400 text-black border-blue-400 outline-0 border w-full md:w-[300px] rounded-md p-1" />
+                                    <input type="text" disabled id="standard-select" value={'🔴 مثال '} dir="ltr" className="bg-gray-200 text-black border-blue-400 outline-0 border w-full md:w-[300px] rounded-md p-1" />
                                 </div>
 
                                 <div className="flex flex-col gap-3">
                                     <label htmlFor="standard-select"> موتور </label>
-                                    <input type="text" disabled id="standard-select" value={'🔴 مثال '} dir="ltr" className="bg-gray-400 text-black border-blue-400 outline-0 border w-full md:w-[300px] rounded-md p-1" />
+                                    <input type="text" disabled id="standard-select" value={'🔴 مثال '} dir="ltr" className="bg-gray-200 text-black border-blue-400 outline-0 border w-full md:w-[300px] rounded-md p-1" />
                                 </div>
 
                                 <div className="flex flex-col gap-3">
                                     <label htmlFor="standard-select"> موتور </label>
-                                    <input type="text" disabled id="standard-select" value={'🔵 مثال '} dir="ltr" className="bg-gray-400 text-black border-blue-400 outline-0 border w-full md:w-[300px] rounded-md p-1" />
+                                    <input type="text" disabled id="standard-select" value={'🔵 مثال '} dir="ltr" className="bg-gray-200 text-black border-blue-400 outline-0 border w-full md:w-[300px] rounded-md p-1" />
                                 </div>
 
                                 <div className="flex flex-col gap-3">
                                     <label htmlFor="standard-select"> موتور </label>
-                                    <input type="text" disabled id="standard-select" value={'🔵 مثال '} dir="ltr" className="bg-gray-400 text-black border-blue-400 outline-0 border w-full md:w-[300px] rounded-md p-1" />
+                                    <input type="text" disabled id="standard-select" value={'🔵 مثال '} dir="ltr" className="bg-gray-200 text-black border-blue-400 outline-0 border w-full md:w-[300px] rounded-md p-1" />
                                 </div>
                             </div>
                         </div>
@@ -76,7 +76,7 @@ export default function Stage3({ setPageState }: Stage3Props) {
                         </div>
                     </div>
                 </div>
-                <div className="flex xl:fixed w-full bg-[#272727] bottom-0 py-2 flex-col gap-5">
+                    <div className="flex xl:fixed w-full right-0 left-0 px-0 xl:px-16 bottom-0 py-2 bg-[#272727] flex-col gap-5">
                     <div>
                         <button type="submit" onClick={() => setPageState(4)} className=" rounded-full relative flex flex-row justify-center bg-blue-400 hover:bg-blue-500 text-white p-2 cursor-pointer w-full md:w-[200px]" >
                             <p className="text-center"> بعدی </p>

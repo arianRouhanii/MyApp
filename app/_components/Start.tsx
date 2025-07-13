@@ -103,7 +103,7 @@ export default function Start() {
             </div>
 
 
-            <a href="#" className="bg-white rounded-full z-50 bottom-5 right-5 fixed" >
+            <a href="#" className="bg-[#272727] rounded-full z-50 bottom-5 left-5 fixed" >
                 <svg width={40} height={40}>
                     <circle
                         cx={20}

@@ -1,6 +1,7 @@
 interface Stage4Props {
     setPageState: (page: number) => void;
 }
+import Link from "next/link";
 import Image from "next/image";
 export default function Stage4({ setPageState }: Stage4Props) {
     return (
@@ -41,11 +42,12 @@ export default function Stage4({ setPageState }: Stage4Props) {
                         <p className="border-r px-3 flex"> آدرس: اصفهان... </p>
                     </div>
                 </div>
-                <div className="flex xl:fixed w-full bottom-0 py-2 bg-[#272727] flex-col gap-5">
-                    <button type="submit" onClick={() => setPageState(1)} className=" rounded-full relative flex flex-row justify-center bg-blue-400 hover:bg-blue-500 text-white p-2 cursor-pointer w-full md:w-[200px]" >
-                        <p className="text-center"> بعدی </p>
-                        <p className="text-end absolute left-5 top-3">&#129120;</p>
-                    </button>
+                    <div className="flex xl:fixed w-full right-0 left-0 px-0 xl:px-16 bottom-0 py-2 bg-[#272727] flex-col gap-5">
+                    <Link href={'..'}>
+                        <button type="submit" onClick={() => setPageState(1)} className=" rounded-full relative flex flex-row justify-center bg-blue-400 hover:bg-blue-500 text-white p-2 cursor-pointer w-full md:w-[200px]" >
+                            <p className="text-center"> اتمام </p>
+                        </button>
+                    </Link>
                     <div className="bg-gray-400 h-2 w-full">
                         <div className="bg-blue-400 w-full h-full"></div>
                     </div>

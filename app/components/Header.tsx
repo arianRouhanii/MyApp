@@ -137,7 +137,7 @@ export default function Header() {
 
     return (
         <div >
-            <div id="list" className="fixed flex bg-[#272727] flex-col p-5 z-50 w-2/3 h-full close">
+            <div id="list" className="fixed flex bg-[#272727] flex-col p-5 z-50 w-7/12 h-full close">
                 <div className="flex  h-10 w-10 mt-2" >
                     <button id="listbtn2" className="h-[60%] w-[60%] aspect-square flex flex-col justify-between">
                         <div className="w-1/2 h-[4px] bg-white"></div>

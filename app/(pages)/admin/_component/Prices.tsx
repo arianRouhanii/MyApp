@@ -1,16 +1,20 @@
-export default function Prices() {
+interface Stage3Props {
+    setPageState: (page: number) => void;
+}
+export default function Prices({ setPageState }: Stage3Props) {
     return (
-        <div className="w-full gap-10 hidden flex-col">
+        <div className="w-full gap-10 flex flex-col">
+            <button onClick={() => setPageState(3)} className="hidden"></button>
             <h2 className="text-4xl">قیمتها </h2>
-            <div className="flex flex-row gap-10">
-                <div className="w-1/2 gap-5 text-white flex flex-col p-3 rounded-xl bg-gray-400 ">
+            <div className="flex flex-col 2xl:flex-row gap-10">
+                <div className="w-full 2xl:w-1/2 gap-5 text-white flex flex-col p-3 rounded-xl bg-gray-400 ">
                     <h2 className="text-2xl"> موتورها </h2>
                     <form >
                         <p> + موتور جدید </p>
                         <div className="flex flex-row gap-3">
-                            <input type="text" placeholder="نام موتور" className="bg-white outline-0 placeholder:text-gray-400 px-3 py-1 text-black rounded-full" />
-                            <input type="text" placeholder="قیمت (تومان)" className="bg-white outline-0 placeholder:text-gray-400 px-3 py-1 text-black rounded-full" />
-                            <select className="bg-white w-2/6 rounded-full outline-0 text-black px-3 py-1">
+                            <input type="text" placeholder="نام موتور" className="bg-white outline-0 w-2/6 placeholder:text-gray-400 px-3 py-1 text-black rounded-full" />
+                            <input type="text" placeholder="قیمت (تومان)" className="bg-white outline-0 w-2/6 placeholder:text-gray-400 px-3 py-1 text-black rounded-full" />
+                            <select className="bg-white w-1/6 rounded-full outline-0 text-black px-3 py-1">
                                 <option value=""> اقتصادی </option>
                                 <option value=""> مرغوب </option>
                                 <option value=""> لوکس </option>
@@ -48,14 +52,14 @@ export default function Prices() {
                         </div>
                     </div>
                 </div>
-                <div className="w-1/2 gap-5 text-white flex flex-col p-3 rounded-xl bg-gray-400 ">
+                <div className="w-full 2xl:w-1/2 gap-5 text-white flex flex-col p-3 rounded-xl bg-gray-400 ">
                     <h2 className="text-2xl"> موتورها </h2>
                     <form >
                         <p> + موتور جدید </p>
                         <div className="flex flex-row gap-3">
-                            <input type="text" placeholder="نام موتور" className="bg-white outline-0 placeholder:text-gray-400 px-3 py-1 text-black rounded-full" />
-                            <input type="text" placeholder="قیمت (تومان)" className="bg-white outline-0 placeholder:text-gray-400 px-3 py-1 text-black rounded-full" />
-                            <select className="bg-white w-2/6 rounded-full outline-0 text-black px-3 py-1">
+                            <input type="text" placeholder="نام موتور" className="bg-white outline-0 w-2/6 placeholder:text-gray-400 px-3 py-1 text-black rounded-full" />
+                            <input type="text" placeholder="قیمت (تومان)" className="bg-white outline-0 w-2/6 placeholder:text-gray-400 px-3 py-1 text-black rounded-full" />
+                            <select className="bg-white w-1/6 rounded-full outline-0 text-black px-3 py-1">
                                 <option value=""> اقتصادی </option>
                                 <option value=""> مرغوب </option>
                                 <option value=""> لوکس </option>

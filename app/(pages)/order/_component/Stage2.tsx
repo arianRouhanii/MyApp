@@ -132,19 +132,19 @@ export default function Stage2({ setPageState }: Stage2Props) {
                         </div>
                     </div>
                 </div>
-                <div className="flex xl:fixed w-full bottom-0 py-2 bg-[#272727] flex-col gap-5">
-                    <div>
-                        <button type="submit" onClick={() => setPageState(3)} className=" rounded-full relative flex flex-row justify-center bg-blue-400 hover:bg-blue-500 text-white p-2 cursor-pointer w-full md:w-[200px]" >
-                            <p className="text-center"> بعدی </p>
-                            <p className="text-end absolute left-5 top-3">&#129120;</p>
-                        </button>
+                    <div className="flex xl:fixed w-full right-0 left-0 px-0 xl:px-16 bottom-0 py-2 bg-[#272727] flex-col gap-5">
+                        <div>
+                            <button type="submit" onClick={() => setPageState(3)} className=" rounded-full relative flex flex-row justify-center bg-blue-400 hover:bg-blue-500 text-white p-2 cursor-pointer w-full md:w-[200px]" >
+                                <p className="text-center"> بعدی </p>
+                                <p className="text-end absolute left-5 top-3">&#129120;</p>
+                            </button>
+                        </div>
+                        <div className="bg-gray-400 h-2 w-full">
+                            <div className="bg-blue-400 w-1/2 h-full"></div>
+                        </div>
+                        <p className="text-blue-400 text-center"> 50% </p>
                     </div>
-                    <div className="bg-gray-400 h-2 w-full">
-                        <div className="bg-blue-400 w-1/2 h-full"></div>
-                    </div>
-                    <p className="text-blue-400 text-center"> 50% </p>
                 </div>
-            </div>
         </form>
     )
 }

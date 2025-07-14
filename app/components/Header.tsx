@@ -4,7 +4,6 @@ import Image from "next/image";
 export default function Header() {
     useEffect(() => {
         const onPageLoad = () => {
-            console.log("Page has loaded!");
             const list: HTMLElement | null = document?.getElementById('list')
             list?.classList.add('close')
             const openlist: HTMLElement | null = document?.getElementById('listbtn')

@@ -1,15 +1,39 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useEffect } from 'react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 import Image from 'next/image';
 export default function Promo() {
+    useEffect(() => {
+        const onPageLoad = () => {
+            const video: HTMLElement | null = document?.getElementById('video')
+            video?.classList.add('close2')
+            const vidbtn: HTMLElement | null = document?.getElementById('vidbtn')
+            const vidbtn2: HTMLElement | null = document?.getElementById('vidbtn2')
+
+            vidbtn?.addEventListener("click", function () {
+                video?.classList.remove('close2')
+            })
+
+            vidbtn2?.addEventListener("click", function () {
+                video?.classList.add('close2')
+            })
+        };
+
+        onPageLoad();
+    }, []);
     return (
         <div>
+            <div className='fixed top-0 justify-center items-center flex z-50 w-[100%] h-[100vh]' id='video' >
+                <div className='bg-black opacity-50 w-full h-full' id='vidbtn2'>
+                </div>
+                <div className='bg-white absolute w-[80%] aspect-video rounded-lg opacity-100'></div>
+            </div>
             <div className="lg:bg-fixed gap-10 flex lg:flex-row flex-col p-3 lg:p-15 2xl:px-96  bg-[url(/fixedbg.jpg)] ">
                 <div className="text-white lg:p-0 p-3">
-                    <button className="rounded-full flex justify-center hover:opacity-70 items-center pt-2 pl-1 w-25 h-25 text-4xl bg-blue-400"><p>&#9655;</p></button>
+                    <button id='vidbtn' className="rounded-full flex justify-center hover:opacity-70 items-center pt-2 pl-1 w-25 h-25 text-4xl bg-blue-400"><p>&#9655;</p></button>
                     <p className="text-xl lg:mb-30 mt-2 text-blue-400"> مشاهده ویدیوی تبلیغاتی </p>
                 </div>
                 <div className=" w-full lg:hidden flex">

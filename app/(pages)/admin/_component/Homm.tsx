@@ -19,7 +19,7 @@ export default function Homm({ setPageState }: Stage1Props) {
     const [price, setPrice] = useState<string>('...')
     useEffect(() => {
         const onPageLoad = () => {
-            fetch("https://api.allorigins.win/raw?url=https://apiv2.nobitex.ir/market/stats?srcCurrency=usdt&dstCurrency=rls").then(res => res.json()).then(data => setPrice(data.stats["usdt-rls"].latest)).catch(() => setPrice('خطا'));
+            fetch("https://thingproxy.freeboard.io/fetch/https://apiv2.nobitex.ir/market/stats?srcCurrency=usdt&dstCurrency=rls").then(res => res.json()).then(data => setPrice(data.stats["usdt-rls"].latest)).catch(() => setPrice('خطا'));
         }
         onPageLoad();
     }, []);

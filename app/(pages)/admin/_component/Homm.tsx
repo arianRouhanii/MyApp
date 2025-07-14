@@ -1,7 +1,25 @@
 interface Stage1Props {
     setPageState: (page: number) => void;
 }
+
+import React, { useState,useEffect } from "react";
 export default function Homm({ setPageState }: Stage1Props) {
+    const [currentDate,setCurrentDate]= useState<string>('');
+    useEffect(()=>{
+        const date = new Date();
+        const options:Intl.DateTimeFormatOptions = {
+            year:'numeric',
+            month:'long',
+            day:'numeric',
+        };
+        const persianDate = date.toLocaleDateString('fa-IR', options)
+        setCurrentDate(persianDate);
+    }, []);
+
+    const[price,setPrice]= useState<string>('...')
+    useEffect(()=>{
+        fetch("https://api.allorigins.win/raw?url=https://apiv2.nobitex.ir/market/stats?srcCurrency=usdt&dstCurrency=rls").then(res=>res.json()).then(data=>setPrice(data.stats["usdt-rls"].latest)).catch(()=>setPrice('!error'));
+    }, []);
     return (
         <div className=" w-full gap-5 md:gap-10 2xl:mx-30 flex flex-col">
             <h2 className="text-xl font-bold md:text-4xl">خوش آمدید</h2>
@@ -19,11 +37,11 @@ export default function Homm({ setPageState }: Stage1Props) {
                 <div className="w-full md:w-1/2 flex flex-row gap-3 md:gap-10 lg:gap-20">
                     <div className="bg-blue-200 justify-between md:justify-evenly flex flex-row md:flex-col p-2 md:p-0 items-center w-1/2 md:aspect-square rounded-lg">
                         <p className="text-sm md:text-xl 2xl:text-2xl"> قیمت دلار </p>
-                        <p className="text-xl md:text-2xl 2xl:text-4xl"> 92,300 </p>
+                        <p className="text-xl md:text-2xl 2xl:text-4xl"> {price}</p>
                     </div>
                     <div className="bg-blue-200 justify-between md:justify-evenly flex flex-row md:flex-col p-2 md:p-0 items-center w-1/2 md:aspect-square rounded-lg">
                         <p className="text-sm md:text-xl 2xl:text-2xl"> امروز </p>
-                        <p className="text-xl md:text-2xl 2xl:text-4xl"> 1404/6/3 </p>
+                        <p className="text-xl md:text-2xl 2xl:text-4xl">{currentDate} </p>
                     </div>
                 </div>
             </div>

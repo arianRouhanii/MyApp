@@ -1,7 +1,7 @@
 import Image from "next/image"
 export default function Service() {
     return (
-        <div className="bg-[#272727] relative gap-10 flex flex-col py-15 md:py-20 px-3 lg:px-16 2xl:px-96 w-full">
+        <div id="service" className="bg-[#272727] relative gap-10 flex flex-col py-15 md:py-20 px-3 lg:px-16 2xl:px-96 w-full">
             <div className="absolute top-0  h-full w-[1px] bg-gray-700 hidden lg:flex left-14 xl:left-1/6"></div>
             <div className="absolute top-0  h-full w-[1px] bg-gray-700 lg:left-1/3 left-1/6"></div>
             <div className="absolute top-0  h-full w-[1px] bg-gray-700 lg:left-2/3 left-5/6"></div>

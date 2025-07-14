@@ -8,21 +8,21 @@ export default function Homm({ setPageState }: Stage1Props) {
             <div className="w-full flex flex-col md:flex-row gap-3 md:gap-10 lg:gap-20">
                 <div className="w-full md:w-1/2 flex flex-row gap-3 md:gap-10 lg:gap-20">
                     <div className="bg-blue-200 justify-between md:justify-evenly flex flex-row md:flex-col p-2 md:p-0 items-center w-1/2 md:aspect-square rounded-lg">
-                        <p className="text-xl 2xl:text-2xl"> بازدید سایت </p>
+                        <p className="text-sm md:text-xl 2xl:text-2xl"> بازدید سایت </p>
                         <p className="text-xl md:text-2xl 2xl:text-4xl"> 12 </p>
                     </div>
                     <div className="bg-blue-200 justify-between md:justify-evenly flex flex-row md:flex-col p-2 md:p-0 items-center w-1/2 md:aspect-square rounded-lg">
-                        <p className="text-xl 2xl:text-2xl"> بازدید استعلام </p>
+                        <p className="text-sm md:text-xl 2xl:text-2xl"> بازدید استعلام </p>
                         <p className="text-xl md:text-2xl 2xl:text-4xl"> 5 </p>
                     </div>
                 </div>
                 <div className="w-full md:w-1/2 flex flex-row gap-3 md:gap-10 lg:gap-20">
                     <div className="bg-blue-200 justify-between md:justify-evenly flex flex-row md:flex-col p-2 md:p-0 items-center w-1/2 md:aspect-square rounded-lg">
-                        <p className="text-xl 2xl:text-2xl"> قیمت دلار </p>
+                        <p className="text-sm md:text-xl 2xl:text-2xl"> قیمت دلار </p>
                         <p className="text-xl md:text-2xl 2xl:text-4xl"> 92,300 </p>
                     </div>
                     <div className="bg-blue-200 justify-between md:justify-evenly flex flex-row md:flex-col p-2 md:p-0 items-center w-1/2 md:aspect-square rounded-lg">
-                        <p className="text-xl 2xl:text-2xl"> امروز </p>
+                        <p className="text-sm md:text-xl 2xl:text-2xl"> امروز </p>
                         <p className="text-xl md:text-2xl 2xl:text-4xl"> 1404/6/3 </p>
                     </div>
                 </div>

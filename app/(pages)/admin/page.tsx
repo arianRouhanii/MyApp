@@ -14,7 +14,7 @@ export default function Home() {
                     <div className="flex 2xl:p-3"><div onClick={() => setPageState(1)} className="bg-white cursor-pointer rounded-full w-10 2xl:w-full aspect-square"> </div></div>
                     <div className="flex flex-row items-center 2xl:items-start 2xl:flex-col gap-10">
                         <button className="text-start gap-2 flex flex-row" onClick={() => setPageState(3)}>
-                            <Image alt="" src={'/prices.png'} className="h-6 w-6 " width={1000} height={1000}></Image>
+                            <Image alt="" src={'/prices.png'} className="h-6 w-6 " width={100} height={100}></Image>
                             <p className=" md:flex hidden"> قیمتها </p>
                         </button>
                         <button className="text-start gap-2 flex flex-row" onClick={() => setPageState(2)}>

@@ -2,6 +2,7 @@
 interface Stage2Props {
     setPageState: (page: number) => void;
 }
+import Image from "next/image";
 export default function Stage2({ setPageState }: Stage2Props) {
     return (
         <form className="2xl:h-[100vh] bg-[#272727] text-xl" dir="rtl">
@@ -136,7 +137,7 @@ export default function Stage2({ setPageState }: Stage2Props) {
                         <div>
                             <button type="submit" onClick={() => setPageState(3)} className=" rounded-full relative flex flex-row justify-center bg-blue-400 hover:bg-blue-500 text-white p-2 cursor-pointer w-full md:w-[200px]" >
                                 <p className="text-center"> بعدی </p>
-                                <p className="text-end absolute left-5 top-3">&#129120;</p>
+                            <p className="text-end absolute w-6 h-6 left-5 top-3"><Image alt='' src={'/arrowLeft.png'} width={100} height={100}></Image></p>
                             </button>
                         </div>
                         <div className="bg-gray-400 h-2 w-full">

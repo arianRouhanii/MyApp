@@ -15,7 +15,7 @@ export default function Stage1({ setPageState }: Stage1Props) {
     return (
         <form className="2xl:h-[100vh] bg-[#272727] text-xl " dir="rtl">
             <div className="gap-10 h-full justify-between flex flex-col">
-                <div className="2xl:w-1/2 flex px-16 mt-16 flex-col gap-5">
+                <div className="2xl:w-1/2 flex px-5 md:px-16 mt-16 flex-col gap-5">
                     <h2 className="text-2xl text-blue-400 font-bold"> مرحله 1 </h2>
                     <p> لطفا ابتدا نوع آسانسور و ظرفیت کابین و تعداد توقف را انتخاب نموده و سپس سرعت را انتخاب کنید. </p>
                     <div className="flex flex-col justify-center py-10 mb-30 2xl:mb-0 gap-10">
@@ -94,7 +94,7 @@ export default function Stage1({ setPageState }: Stage1Props) {
                         </div>
                     </div>
                 </div>
-                <div className="flex px-16 xl:fixed w-full bottom-0 py-2 bg-[#272727] flex-col gap-5">
+                <div className="flex px-5 md:px-16 xl:fixed w-full bottom-0 py-2 bg-[#272727] flex-col gap-5">
                     <div>
                         <button type="submit" onClick={() => setPageState(2)} className=" rounded-full relative flex flex-row justify-center bg-blue-400 hover:bg-blue-500 text-white p-2 cursor-pointer w-full md:w-[200px]" >
                             <p className="text-center"> بعدی </p>

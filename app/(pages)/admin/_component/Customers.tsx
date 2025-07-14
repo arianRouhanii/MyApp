@@ -7,7 +7,7 @@ export default function Customers({ setPageState }: Stage2Props) {
         <div className="w-full text-black gap-5 md:gap-10 flex flex-col">
             <button onClick={() => setPageState(2)} className="hidden"></button>
             <h2 className="text-xl font-bold md:text-4xl">مشتریان </h2>
-            <div className="w-full text-xs flex flex-row">
+            <div className="w-full text-xs md:text-lg flex flex-row">
                 <p className="w-1/3 md:w-1/2">نام و نام خانوادگی</p>
                 <p className="w-1/3 md:w-1/4">شماره تلفن همراه</p>
                 <p className="w-1/3 md:w-1/4 text-end">مشاهده پیش فاکتور </p>

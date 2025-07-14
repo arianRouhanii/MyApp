@@ -5,7 +5,7 @@ interface Stage2Props {
 export default function Stage2({ setPageState }: Stage2Props) {
     return (
         <form className="2xl:h-[100vh] bg-[#272727] text-xl" dir="rtl">
-            <div className="gap-10 px-16 mt-16 justify-center w-full flex flex-col">
+            <div className="gap-10 px-5 md:px-16 mt-16 justify-center w-full flex flex-col">
                 <div className="w-full justify-center flex flex-col gap-5">
                     <h2 className="text-2xl font-bold text-blue-400"> مرحله 2 </h2>
                     <p> لطفا نوع قطعات را انتخاب کنید. </p>

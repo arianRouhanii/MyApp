@@ -15,7 +15,11 @@ export default function adminAuth() {
                     </form>
                 </div>
                 <div className="w-1/2 2xl:flex justify-center hidden   items-center">
-                    <div className="w-full h-full rounded-2xl bg-[url(/about.png)] z-20"></div>
+                    <div className="w-full relative h-full justify-center items-center flex">
+                        <div className="absolute bg-blue-600 rounded-2xl h-1/2 w-1/2 top-0 right-0"></div>
+                        <div className="absolute bg-blue-400 rounded-2xl h-1/2 w-1/2 bottom-0 left-0"></div>
+                        <div className="w-[95%] h-[95%] rounded-2xl bg-[url(/about.png)] z-20"></div>
+                    </div>
                 </div>
             </div>
         </main>

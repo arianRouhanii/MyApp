@@ -21,7 +21,7 @@ export default function Home() {
                             <Image alt="" src={'/customers.png'} className="h-6 w-6 " width={1000} height={1000}></Image>
                             <p className=" md:flex hidden"> مشتریان </p>
                         </button>
-                        <button className="text-start" onClick={() => setPageState(2)}>
+                        <button className="text-start gap-2 flex flex-row" onClick={() => setPageState(2)}>
                             <svg viewBox="0 0 1024 1024" className="w-6 h-6" fill="#ffffff"><g id="SVGRepo_bgCarrier"></g><g id="SVGRepo_tracerCarrier" ></g><g id="SVGRepo_iconCarrier"><path d="M146.3 73.06v877.71h512l219.43-239.38V73.06H146.3z m512.01 769.46V694.77h135.44L658.31 842.52z m146.27-220.89H585.16v256H219.44V146.2h585.14v475.43z" fill="#ffffff"></path><path d="M292.59 219.34h438.86v73.14H292.59zM292.59 365.63H658.3v73.14H292.59zM292.59 511.91h219.43v73.14H292.59z" fill="#ffffff"></path></g></svg>
                             <p className=" md:flex hidden">پیش فاکتورها</p>
                         </button>

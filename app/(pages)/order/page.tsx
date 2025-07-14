@@ -10,7 +10,7 @@ export default function Home() {
   const [pageState, setPageState] = useState(1)
   return (
     <main className="text-white bg-[#272727]">
-      <div dir="rtl" className="bg-blue-400 gap-8 text-white flex flex-col-reverse justify-center px-16 h-[10vh] md:h-[30vh]">
+      <div dir="rtl" className="bg-blue-400 gap-8 text-white flex flex-col-reverse justify-center px-5 md:px-16 h-[10vh] md:h-[30vh]">
         <p className="hidden md:flex">
           در رافد، ما به شفافیت و رضایت شما اهمیت می‌دهیم. می‌دانیم که انتخاب آسانسور یا پله برقی مناسب برای پروژه شما یک تصمیم مهم است. به همین دلیل، شما را تشویق می‌کنیم تا ابتدا به صورت آنلاین استعلام قیمت بگیرید و مقایسه کنید. پس از آنکه با اطمینان کامل از انتخاب خود مطمئن شدید، با خیالی آسوده اجرا و نصب را به تیم متخصص ما بسپارید. ما کیفیت، ایمنی و آرامش خاطر را برای شما تضمین می‌کنیم
         </p>

@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Stage4({ setPageState }: Stage4Props) {
     return (
         <form className="2xl:h-[100vh] bg-[#272727] text-xl" dir="rtl">
-            <div className="gap-10 h-full justify-between p-16 flex flex-col">
+            <div className="gap-10 h-full justify-between px-5 md:px-16 mt-16 flex flex-col">
                 <div className="2xl:w-1/2 flex flex-col gap-5">
                     <h2 className="text-2xl font-bold text-blue-400"> مرحله 4 </h2>
                     <p> در این مرحله پیش فاکتور خود را دریافت کنید.در صورت هرگونه سوال با ما تماس بگیرید. </p>

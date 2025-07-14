@@ -10,7 +10,7 @@ export default function Stage3({ setPageState }: Stage3Props) {
     }
     return (
         <form className="2xl:h-[100vh] bg-[#272727] text-xl" dir="rtl">
-            <div className="gap-10 px-16 mt-16 justify-center w-full flex flex-col">
+            <div className="gap-10 px-5 md:px-16 mt-16 justify-center w-full flex flex-col">
                 <div className="w-full justify-center flex flex-col gap-5">
                     <h2 className="text-2xl font-bold text-blue-400"> مرحله 3 </h2>
                     <p> لطفا نوع قطعات را چک کنید و در مرحله بعد پیش فاکتور دریافت نمایید. </p>

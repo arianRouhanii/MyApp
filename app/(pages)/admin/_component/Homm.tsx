@@ -2,23 +2,26 @@ interface Stage1Props {
     setPageState: (page: number) => void;
 }
 
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 export default function Homm({ setPageState }: Stage1Props) {
-    const [currentDate,setCurrentDate]= useState<string>('');
-    useEffect(()=>{
+    const [currentDate, setCurrentDate] = useState<string>('');
+    useEffect(() => {
         const date = new Date();
-        const options:Intl.DateTimeFormatOptions = {
-            year:'numeric',
-            month:'long',
-            day:'numeric',
+        const options: Intl.DateTimeFormatOptions = {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
         };
         const persianDate = date.toLocaleDateString('fa-IR', options)
         setCurrentDate(persianDate);
     }, []);
 
-    const[price,setPrice]= useState<string>('...')
-    useEffect(()=>{
-        fetch("https://api.allorigins.win/raw?url=https://apiv2.nobitex.ir/market/stats?srcCurrency=usdt&dstCurrency=rls").then(res=>res.json()).then(data=>setPrice(data.stats["usdt-rls"].latest)).catch(()=>setPrice('!error'));
+    const [price, setPrice] = useState<string>('...')
+    useEffect(() => {
+        const onPageLoad = () => {
+            fetch("https://api.allorigins.win/raw?url=https://apiv2.nobitex.ir/market/stats?srcCurrency=usdt&dstCurrency=rls").then(res => res.json()).then(data => setPrice(data.stats["usdt-rls"].latest)).catch(() => setPrice('خطا'));
+        }
+        onPageLoad();
     }, []);
     return (
         <div className=" w-full gap-5 md:gap-10 2xl:mx-30 flex flex-col">

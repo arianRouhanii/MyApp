@@ -11,7 +11,9 @@ export default function Home() {
         <main className="text-blue-950 h-[100vh] flex flex-col 2xl:flex-row bg-white" dir="rtl">
             <div className="bg-blue-400 text-white flex flex-row 2xl:flex-col 2xl:w-1/12 2xl:h-full p-3 justify-between">
                 <div className="flex flex-row 2xl:flex-col gap-5 md:gap-20">
-                    <div className="flex 2xl:p-3"><div onClick={() => setPageState(1)} className="bg-white cursor-pointer rounded-full w-10 2xl:w-full aspect-square"> </div></div>
+                    <div className="flex 2xl:p-3"><div onClick={() => setPageState(1)} className="bg-white cursor-pointer justify-center flex items-center rounded-full w-10 2xl:w-full aspect-square">
+                        <div className="w-[90%] h-[90%] rounded-full border-4 border-blue-400"></div>
+                     </div></div>
                     <div className="flex flex-row items-center 2xl:items-start 2xl:flex-col gap-10">
                         <button className="text-start gap-2 flex flex-row" onClick={() => setPageState(3)}>
                             <Image alt="" src={'/prices.png'} className="h-6 w-6 " width={100} height={100}></Image>

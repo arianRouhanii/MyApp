@@ -11,7 +11,7 @@ export default function News() {
             <div className="absolute top-0  h-full w-[1px] bg-gray-700 lg:left-2/3 left-5/6"></div>
             <div className="absolute top-0  h-full w-[1px] bg-gray-700 hidden lg:flex right-14 xl:left-5/6"></div>
             <div className="flex flex-col text-sm gap-10 text-end">
-                <h2 className="text-4xl text-white z-10"><span className="text-blue-400"> اخبار </span> جاری </h2>
+                <h2 className="text-3xl md:text-4xl text-white z-10"><span className="text-blue-400"> اخبار </span> جاری </h2>
             </div>
             <div className="hidden md:flex swiper-container">
                 <div className="swiper-wrapper ">
@@ -93,7 +93,7 @@ export default function News() {
                             <div className="w-full flex flex-row gap-10">
                                 <div className="z-10 group">
                                     <div className="bg-black overflow-hidden"><Image className="group-hover:opacity-60 group-hover:scale-110 " alt="" width={1000} height={1000} src={"/1.png"}></Image></div>
-                                    <div className="relative bottom-5 group-hover:bottom-30 flex flex-row justify-center pr-5">
+                                    <div className="relative bottom-30 flex flex-row justify-center pr-5">
                                         <div className="inline-block bg-blue-500 w-[90%] p-4 justify-center">
                                             <p className="text-xs mb-1">Septamber 12, 2021</p>
                                             <p className="text-2xl">لورم ایپسوم متن ساختگی</p>
@@ -106,7 +106,7 @@ export default function News() {
                             <div className="w-full flex flex-row gap-10">
                                 <div className="z-10 group">
                                     <div className="bg-black overflow-hidden"><Image className="group-hover:opacity-60 group-hover:scale-110 " alt="" width={1000} height={1000} src={"/2.png"}></Image></div>
-                                    <div className="relative bottom-5 group-hover:bottom-30 flex flex-row justify-center pr-5">
+                                    <div className="relative bottom-30 flex flex-row justify-center pr-5">
                                         <div className="inline-block bg-blue-500 w-[90%] p-4 justify-center">
                                             <p className="text-xs mb-1">Septamber 12, 2021</p>
                                             <p className="text-2xl">لورم ایپسوم متن ساختگی</p>
@@ -119,7 +119,7 @@ export default function News() {
                             <div className="w-full flex flex-row gap-10">
                                 <div className="z-10 group">
                                     <div className="bg-black overflow-hidden"><Image className="group-hover:opacity-60 group-hover:scale-110 " alt="" width={1000} height={1000} src={"/1.png"}></Image></div>
-                                    <div className="relative bottom-5 group-hover:bottom-30 flex flex-row justify-center pr-5">
+                                    <div className="relative bottom-30 flex flex-row justify-center pr-5">
                                         <div className="inline-block bg-blue-500 w-[90%] p-4 justify-center">
                                             <p className="text-xs mb-1">Septamber 12, 2021</p>
                                             <p className="text-2xl">لورم ایپسوم متن ساختگی</p>
@@ -132,7 +132,7 @@ export default function News() {
                             <div className="w-full flex flex-row gap-10">
                                 <div className="z-10 group">
                                     <div className="bg-black overflow-hidden"><Image className="group-hover:opacity-60 group-hover:scale-110 " alt="" width={1000} height={1000} src={"/2.png"}></Image></div>
-                                    <div className="relative bottom-5 group-hover:bottom-30 flex flex-row justify-center pr-5">
+                                    <div className="relative bottom-30 flex flex-row justify-center pr-5">
                                         <div className="inline-block bg-blue-500 w-[90%] p-4 justify-center">
                                             <p className="text-xs mb-1">Septamber 12, 2021</p>
                                             <p className="text-2xl">لورم ایپسوم متن ساختگی</p>

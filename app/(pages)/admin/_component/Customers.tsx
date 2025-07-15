@@ -18,7 +18,7 @@ export default function Customers({ setPageState }: Stage2Props) {
                     <p className="w-1/3 md:w-1/2"> ریاض باقری </p>
                     <p className="w-1/3 md:w-1/4"> 09132281550 </p>
                     <div className="w-1/3 md:w-1/4 flex justify-end ">
-                        <button className="bg-blue-400 text-white flex flex-row justify-between rounded-lg px-3 py-1">
+                        <button className="bg-blue-400 hover:bg-blue-500 text-white flex flex-row justify-between rounded-lg px-3 py-1">
                             <div className="h-6 w-6"><Image alt="" width={1000} height={1000} src={'/pdfLOGO.png'}></Image></div>
                             <p className="hidden md:flex"> دانلود فایل </p>
                         </button>
@@ -28,7 +28,7 @@ export default function Customers({ setPageState }: Stage2Props) {
                     <p className="w-1/3 md:w-1/2"> ریاض باقری </p>
                     <p className="w-1/3 md:w-1/4"> 09132281550 </p>
                     <div className="w-1/3 md:w-1/4 flex justify-end ">
-                        <button className="bg-blue-400 text-white flex flex-row justify-between rounded-lg px-3 py-1">
+                        <button className="bg-blue-400 hover:bg-blue-500 text-white flex flex-row justify-between rounded-lg px-3 py-1">
                             <div className="h-6 w-6"><Image alt="" width={1000} height={1000} src={'/pdfLOGO.png'}></Image></div>
                             <p className="hidden md:flex"> دانلود فایل </p>
                         </button>
@@ -38,7 +38,7 @@ export default function Customers({ setPageState }: Stage2Props) {
                     <p className="w-1/3 md:w-1/2"> ریاض باقری </p>
                     <p className="w-1/3 md:w-1/4"> 09132281550 </p>
                     <div className="w-1/3 md:w-1/4 flex justify-end ">
-                        <button className="bg-blue-400 text-white flex flex-row justify-between rounded-lg px-3 py-1">
+                        <button className="bg-blue-400 hover:bg-blue-500 text-white flex flex-row justify-between rounded-lg px-3 py-1">
                             <div className="h-6 w-6"><Image alt="" width={1000} height={1000} src={'/pdfLOGO.png'}></Image></div>
                             <p className="hidden md:flex"> دانلود فایل </p>
                         </button>

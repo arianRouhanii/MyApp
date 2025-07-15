@@ -13,7 +13,7 @@ export default function Projects() {
             <div className="absolute top-0  h-full w-[1px] bg-gray-700 lg:left-2/3 left-5/6"></div>
             <div className="absolute top-0  h-full w-[1px] bg-gray-700 hidden lg:flex right-14 xl:left-5/6"></div>
             <div className="flex flex-col text-sm text-end gap-10 ">
-                <h2 className="z-10 text-4xl text-white">  <span className="text-blue-400"> پروژه </span> های ما</h2>
+                <h2 className="z-10 text-3xl md:text-4xl text-white">  <span className="text-blue-400"> پروژه </span> های ما</h2>
             </div>
             <div className="swiper-container hidden md:flex">
                 <div className="swiper-wrapper swiper-wrapper1" >

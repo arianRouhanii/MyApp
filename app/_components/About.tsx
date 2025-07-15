@@ -12,7 +12,7 @@ export default function About() {
                 <div className="relative z-10 bottom-5 flex flex-row justify-start pl-5"><p className="inline-block bg-blue-500 px-8 py-4 text-white  text-sm justify-end">دفتر اصفهان</p></div>
             </div>
             <div className="flex text-white z-10 flex-col text-end text-sm gap-10 w-full md:w-1/2">
-                <h2 className="text-4xl">
+                <h2 className="text-3xl md:text-4xl">
                     درباره ما
                     <span>:</span>
                     <span className="text-blue-400"> رافد آسمان سا </span>

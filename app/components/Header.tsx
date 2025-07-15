@@ -32,7 +32,7 @@ export default function Header() {
                                 <div className="w-full h-[4px] bg-white"></div>
                             </button>
                         </div>
-                        <div className="text-white h-full gap-5 pt-10 text-2xl flex flex-col">
+                        <div className="text-white h-full gap-10 pt-10 text-2xl flex flex-col">
                             <a href="#" className="text-start text-blue-400"> خانه </a>
                             <a href="#about" className="text-start"> درباره ما </a>
                             <a href="#projects" className="text-start"> پروژه های ما </a>

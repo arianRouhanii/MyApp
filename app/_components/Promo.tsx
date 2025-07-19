@@ -26,7 +26,7 @@ export default function Promo() {
     }, []);
     return (
         <div>
-            <div className='fixed top-0 justify-center items-center flex z-50 w-[100%] h-[100vh]' id='video' >
+            <div className='fixed top-0 justify-center items-center flex z-50 w-[100%] h-[100vh] close2' id='video' >
                 <div className='bg-black opacity-50 w-full h-full' id='vidbtn2'>
                 </div>
                 <div className='bg-white absolute w-[80%] aspect-video rounded-lg opacity-100'></div>

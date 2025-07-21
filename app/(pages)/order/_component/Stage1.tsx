@@ -2,7 +2,7 @@ interface Stage1Props {
     setPageState: (page: number) => void;
 }
 import Image from 'next/image';
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 export default function Stage1({ setPageState }: Stage1Props) {
     const [selectedCategory, setSelectedCategory] = useState<string>('')
@@ -237,8 +237,106 @@ export default function Stage1({ setPageState }: Stage1Props) {
         setSelectedSpeed(e.target.value);
     }
 
+
+    const [isChecked, setIsChecked] = useState(false);
+
+    const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setIsChecked(e.target.checked);
+    };
+
+
+    const [input1, setInput1] = useState<number | ''>('')
+    const [input2, setInput2] = useState<number | ''>('')
+    const [check1, setCheck1] = useState(false)
+    const [check2, setCheck2] = useState(false)
+    const [check3, setCheck3] = useState(false)
+    const [status, setStatus] = useState<'N' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12' | '13' | '14' | '15' | '16' | '17' | '18' | '19' | '20'>('N');
+    const handleInput1Change = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setInput1(e.target.value === '' ? '' : parseFloat(e.target.value))
+    }
+    const handleInput2Change = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setInput2(e.target.value === '' ? '' : parseFloat(e.target.value))
+    }
+
+    const calculateModifiedInput1 = (): number => {
+        if (input1 === '') return 0;
+        let modifier = 0;
+        if (check1) modifier += 5;
+        if (check2) modifier += 5;
+        return input1 + modifier;
+    }
+    const calculateModifiedInput2 = (): number => {
+        if (input2 === '') return 0;
+        let modifier = 0;
+        if (check3) modifier += 5;
+        return input2 + modifier;
+    }
+    const calculateResult1 = (): number => {
+        const modifiedInput = calculateModifiedInput1();
+        return modifiedInput - 40;
+    }
+    const calculateResult2 = (): number => {
+        const modifiedInput = calculateModifiedInput2();
+        return modifiedInput - 60;
+    }
+
+    const calculateFinalResult = (): number => {
+        if (input1 === '' || input2 === '') return 0
+
+        const result1 = calculateResult1();
+        const result2 = calculateResult2();
+        const finalResult = result1 * result2;
+
+        return finalResult
+    }
+    useEffect(() => {
+        const finalResult = calculateFinalResult();
+        if (finalResult >= 2800 && finalResult < 3700) {
+            setStatus('1')
+        } else if (finalResult >= 4900 && finalResult < 5800) {
+            setStatus('2')
+        } else if (finalResult >= 6000 && finalResult < 7000) {
+            setStatus('3')
+        } else if (finalResult >= 7900 && finalResult < 9000) {
+            setStatus('4')
+        } else if (finalResult >= 9800 && finalResult < 11700) {
+            setStatus('5')
+        } else if (finalResult >= 11700 && finalResult < 13000) {
+            setStatus('6')
+        } else if (finalResult >= 13100 && finalResult < 14500) {
+            setStatus('7')
+        } else if (finalResult >= 14500 && finalResult < 16600) {
+            setStatus('8')
+        } else if (finalResult >= 15900 && finalResult < 17500) {
+            setStatus('9')
+        } else if (finalResult >= 17300 && finalResult < 20000) {
+            setStatus('10')
+        } else if (finalResult >= 18700 && finalResult < 20500) {
+            setStatus('11')
+        } else if (finalResult >= 20100 && finalResult < 22000) {
+            setStatus('12')
+        } else if (finalResult >= 21500 && finalResult < 24000) {
+            setStatus('13')
+        } else if (finalResult >= 22900 && finalResult < 25000) {
+            setStatus('14')
+        } else if (finalResult >= 24300 && finalResult < 26500) {
+            setStatus('15')
+        } else if (finalResult >= 25700 && finalResult < 29000) {
+            setStatus('16')
+        } else if (finalResult >= 27100 && finalResult < 29500) {
+            setStatus('17')
+        } else if (finalResult >= 28500 && finalResult < 31000) {
+            setStatus('18')
+        } else if (finalResult >= 29900 && finalResult < 32500) {
+            setStatus('19')
+        } else if (finalResult >= 31300 && finalResult < 34000) {
+            setStatus('20')
+        } else {
+            setStatus('N')
+        }
+    }, [input1, input2, check1, check2, check3])
     return (
-        <form className="2xl:h-[100vh] bg-[#272727] text-xl " dir="rtl">
+        <form className=" bg-[#272727] text-xl " dir="rtl">
             <div className="gap-10 h-full justify-between flex flex-col">
                 <div className="2xl:w-1/2 flex px-5 md:px-16 mt-16 flex-col gap-5">
                     <h2 className="text-2xl text-blue-400 font-bold"> مرحله 1 </h2>
@@ -327,6 +425,116 @@ export default function Stage1({ setPageState }: Stage1Props) {
                                     {Spower16 ? '7' : ''}{Spower17 ? '17' : ''}{Spower18 ? '19' : ''}{Spower19 ? '25' : ''}{Spower20 ? '27' : ''}
                                     kw
                                 </p>
+                            </div>
+                        </div>
+                        <div className='flex flex-row text-blue-400 gap-2'>
+                            <input id='toggleCheckbox' type="checkbox" onChange={handleCheckboxChange} />
+                            <label htmlFor="toggleCheckbox">ظرفیت کابین خود را نمیدانم !</label>
+                        </div>
+                        {isChecked && (
+                            <div id="hiddenDiv" className='border-r border-blue-400 pr-5' style={{ display: isChecked ? 'block' : 'none' }}>
+                                <p className='pb-5'> عمق و عرض چاهک را به  سانتی متر وارد نمایید. </p>
+                                <div className='flex flex-row gap-5'>
+                                    <div className="flex flex-col md:w-[200px] gap-3">
+                                        <label htmlFor="depth"> عمق چاهک </label>
+                                        <input type='number' value={input2} onChange={handleInput2Change} id="depth" className="bg-gray-100 text-black border-blue-400 outline-0 border rounded-md p-1" />
+                                    </div>
+                                    <div className="flex flex-col md:w-[200px] gap-3">
+                                        <label htmlFor="wid"> عرض چاهک </label>
+                                        <input type='number' value={input1} onChange={handleInput1Change} id="wid" className="bg-gray-100 text-black border-blue-400 outline-0 border rounded-md p-1" />
+                                    </div>
+                                    <div>
+                                        <p>{calculateResult2()}</p>
+                                        <p>{calculateResult1()}</p>
+                                        <p className='text-blue-400'>{calculateFinalResult()}</p>
+                                    </div>
+
+                                </div>
+                                <p className='pt-20'> در صورتی که هر طرف چاهک شما دیوار برشی دارد تیک مربوط به آنرا بزنید : </p>
+                                <div className='flex flex-row justify-end'>
+                                    <div>
+                                        <div className='flex justify-center py-5'>
+                                            <input type="checkbox" id="t-wall" checked={check3} onChange={() => setCheck3(!check3)} />
+                                        </div>
+                                        <div className='relative flex flex-row justify-center gap-5'>
+                                            <input type="checkbox" id="l-wall" checked={check1} onChange={() => setCheck1(!check1)} />
+                                            <div className='border-4 border-gray-400 w-[150px] aspect-square'></div>
+                                            <input type="checkbox" id="r-wall" checked={check2} onChange={() => setCheck2(!check2)} />
+                                            <div className='absolute top-35 bg-[#272727] px-10'>
+                                                <svg width="16" height="27" viewBox="0 0 16 27" fill="none">
+                                                    <path d="M8.70711 0.292892C8.31658 -0.0976315 7.68342 -0.0976315 7.29289 0.292892L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292892ZM8 27H9L9 1H8H7L7 27H8Z" fill="white" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='flex flex-col gap-5'>
+                                    <p> ظرفیت کابین شما <span className='text-blue-400'> {status} نفر </span>  میباشد! </p>
+                                    <div className='flex flex-row gap-10'>
+                                        <div className="flex flex-col md:w-[200px] gap-3">
+                                            <label htmlFor="select1"> تعداد توقف </label>
+                                            <select id="select1" value={selectedCategory} onChange={handleCategoryChange} className="bg-gray-100 text-black border-blue-400 outline-0 border rounded-md p-1">
+                                                <option value="">--</option>
+                                                <option value="first1"> 2 توقف  </option>
+                                                <option value="first2"> 3 توقف </option>
+                                                <option value="first3"> 4 توقف </option>
+                                                <option value="first4"> 5 توقف </option>
+                                                <option value="second1"> 6 توقف </option>
+                                                <option value="second2"> 7 توقف </option>
+                                                <option value="second3"> 8 توقف </option>
+                                                <option value="second4"> 9 توقف </option>
+                                                <option value="second5"> 10 توقف </option>
+                                                <option value="second6"> 11 توقف </option>
+                                                <option value="second7"> 12 توقف </option>
+                                                <option value="third1"> 13 توقف </option>
+                                                <option value="third2"> 14 توقف </option>
+                                                <option value="third3"> 15 توقف </option>
+                                                <option value="third4"> 16 توقف </option>
+                                                <option value="third5"> 17 توقف </option>
+                                                <option value="third6"> 18 توقف </option>
+                                                <option value="third7"> 19 توقف </option>
+                                                <option value="third8"> 20 توقف </option>
+                                                <option value="third9"> 21 توقف </option>
+                                                <option value="third10"> 22 توقف </option>
+                                                <option value="third11"> 23 توقف </option>
+                                                <option value="third12"> 24 توقف </option>
+                                                <option value="third13"> 25 توقف </option>
+                                            </select>
+                                        </div>
+                                        <div className="flex flex-col md:w-[200px] gap-3">
+                                            <label htmlFor="select2"> سرعت </label>
+                                            <select id="select2" value={selectedSpeed} onChange={handleSpeedChange} className="bg-gray-100 text-black border-blue-400 outline-0 border rounded-md p-1">
+                                                {!selectedCategory ? (
+                                                    <option value="">--</option>
+                                                ) : (
+                                                    options[selectedCategory as keyof typeof options].map((option) => (
+                                                        <option key={option} value={option}>
+                                                            {option}
+                                                        </option>
+                                                    ))
+                                                )}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <p className='text-sm'> بعد از انتخاب تعداد توقف و سرعت به مرحله بعدی بروید.  </p>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                    <div className='flex flex-col gap-10'>
+                        <p> در صورتی که آسانسور شما معمولی است هیچ گزینه ای را انتخاب نکنید در غیر این صورت یکی از گزینه های زیر را انتخاب کنید: </p>
+                        <div className='flex flex-row pb-60 justify-between'>
+                            <div>
+                                <input type="radio" name="doortype" id="tunnel" />
+                                <label htmlFor="tunnel"> دو درب مقابل(تونل) </label>
+                            </div>
+                            <div>
+                                <input type="radio" name="doortype" id="adjacent" />
+                                <label htmlFor="adjacent"> دو درب مجاور </label>
+                            </div>
+                            <div>
+                                <input type="radio" name="doortype" id="three" />
+                                <label htmlFor="three"> سه درب </label>
                             </div>
                         </div>
                     </div>

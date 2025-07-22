@@ -293,14 +293,6 @@ export default function Stage1({ setPageState }: Stage1Props) {
 
 
     const pRef = useRef<HTMLParagraphElement>(null)
-    const [HideIt, setHideIt] = useState(true)
-    useEffect(() => {
-        if (pRef.current) {
-            const textLength = pRef.current.textContent?.trim();
-            setHideIt(textLength === setStatus(''));
-        }
-    }, [status])
-
 
     useEffect(() => {
         const finalResult = calculateFinalResult();

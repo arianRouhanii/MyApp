@@ -1,8 +1,9 @@
 interface Stage1Props {
     setPageState: (page: number) => void;
 }
+import { stat } from 'fs';
 import Image from 'next/image';
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef, use } from 'react'
 
 export default function Stage1({ setPageState }: Stage1Props) {
     const [selectedCategory, setSelectedCategory] = useState<string>('')
@@ -239,9 +240,10 @@ export default function Stage1({ setPageState }: Stage1Props) {
 
 
     const [isChecked, setIsChecked] = useState(false);
-
+    const [isCheckedIn, setIsCheckedIn] = useState(false);
     const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setIsChecked(e.target.checked);
+        setIsCheckedIn(e.target.checked);
     };
 
 
@@ -250,7 +252,7 @@ export default function Stage1({ setPageState }: Stage1Props) {
     const [check1, setCheck1] = useState(false)
     const [check2, setCheck2] = useState(false)
     const [check3, setCheck3] = useState(false)
-    const [status, setStatus] = useState<'N' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12' | '13' | '14' | '15' | '16' | '17' | '18' | '19' | '20'>('N');
+    const [status, setStatus] = useState<''| 'error' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12' | '13' | '14' | '15' | '16' | '17' | '18' | '19' | '20'>('');
     const handleInput1Change = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInput1(e.target.value === '' ? '' : parseFloat(e.target.value))
     }
@@ -289,6 +291,18 @@ export default function Stage1({ setPageState }: Stage1Props) {
 
         return finalResult
     }
+
+
+    const pRef = useRef<HTMLParagraphElement>(null)
+    const [HideIt, setHideIt] = useState(true)
+    useEffect(() => {
+        if (pRef.current) {
+            const textLength = pRef.current.textContent?.trim();
+            setHideIt(textLength === setStatus(''));
+        }
+    }, [status])
+
+
     useEffect(() => {
         const finalResult = calculateFinalResult();
         if (finalResult >= 2800 && finalResult < 3700) {
@@ -331,10 +345,12 @@ export default function Stage1({ setPageState }: Stage1Props) {
             setStatus('19')
         } else if (finalResult >= 31300 && finalResult < 34000) {
             setStatus('20')
+        } else if (finalResult <= 0 ) {
+            setStatus('')
         } else {
-            setStatus('N')
+            setStatus('error')
         }
-    }, [input1, input2, check1, check2, check3])
+    }, [input1, input2, check1, check2, check3, pRef])
     return (
         <form className=" bg-[#272727] text-xl " dir="rtl">
             <div className="gap-10 h-full justify-between flex flex-col">
@@ -350,83 +366,85 @@ export default function Stage1({ setPageState }: Stage1Props) {
                                 <option value=""> هیدرولیک </option>
                             </select>
                         </div>
-                        <div className="flex flex-col 2xl:flex-row gap-10  justify-between">
-                            <div className="flex flex-col md:w-[200px] gap-3">
-                                <label htmlFor="select1"> تعداد توقف </label>
-                                <select id="select1" value={selectedCategory} onChange={handleCategoryChange} className="bg-gray-100 text-black border-blue-400 outline-0 border rounded-md p-1">
-                                    <option value="">--</option>
-                                    <option value="first1"> 2 توقف  </option>
-                                    <option value="first2"> 3 توقف </option>
-                                    <option value="first3"> 4 توقف </option>
-                                    <option value="first4"> 5 توقف </option>
-                                    <option value="second1"> 6 توقف </option>
-                                    <option value="second2"> 7 توقف </option>
-                                    <option value="second3"> 8 توقف </option>
-                                    <option value="second4"> 9 توقف </option>
-                                    <option value="second5"> 10 توقف </option>
-                                    <option value="second6"> 11 توقف </option>
-                                    <option value="second7"> 12 توقف </option>
-                                    <option value="third1"> 13 توقف </option>
-                                    <option value="third2"> 14 توقف </option>
-                                    <option value="third3"> 15 توقف </option>
-                                    <option value="third4"> 16 توقف </option>
-                                    <option value="third5"> 17 توقف </option>
-                                    <option value="third6"> 18 توقف </option>
-                                    <option value="third7"> 19 توقف </option>
-                                    <option value="third8"> 20 توقف </option>
-                                    <option value="third9"> 21 توقف </option>
-                                    <option value="third10"> 22 توقف </option>
-                                    <option value="third11"> 23 توقف </option>
-                                    <option value="third12"> 24 توقف </option>
-                                    <option value="third13"> 25 توقف </option>
-                                </select>
-                            </div>
-                            <div className="flex flex-col md:w-[200px] gap-3">
-                                <label htmlFor="select3"> ظرفیت کابین </label>
-                                <select id="select3" value={selectedCapacity} onChange={handleCapacityChange} className="bg-gray-100 text-black border-blue-400 outline-0 border rounded-md p-1">
-                                    {!selectedCategory ? (
+                        {!isCheckedIn && (
+                            <div className="flex flex-col 2xl:flex-row gap-10  justify-between">
+                                <div className="flex flex-col md:w-[200px] gap-3">
+                                    <label htmlFor="select1"> تعداد توقف </label>
+                                    <select id="select1" value={selectedCategory} onChange={handleCategoryChange} className="bg-gray-100 text-black border-blue-400 outline-0 border rounded-md p-1">
                                         <option value="">--</option>
-                                    ) : (
-                                        options2[selectedCategory as keyof typeof options2].map((option) => (
-                                            <option key={option} value={option}>
-                                                {option}
-                                            </option>
-                                        ))
-                                    )}
-                                </select>
+                                        <option value="first1"> 2 توقف  </option>
+                                        <option value="first2"> 3 توقف </option>
+                                        <option value="first3"> 4 توقف </option>
+                                        <option value="first4"> 5 توقف </option>
+                                        <option value="second1"> 6 توقف </option>
+                                        <option value="second2"> 7 توقف </option>
+                                        <option value="second3"> 8 توقف </option>
+                                        <option value="second4"> 9 توقف </option>
+                                        <option value="second5"> 10 توقف </option>
+                                        <option value="second6"> 11 توقف </option>
+                                        <option value="second7"> 12 توقف </option>
+                                        <option value="third1"> 13 توقف </option>
+                                        <option value="third2"> 14 توقف </option>
+                                        <option value="third3"> 15 توقف </option>
+                                        <option value="third4"> 16 توقف </option>
+                                        <option value="third5"> 17 توقف </option>
+                                        <option value="third6"> 18 توقف </option>
+                                        <option value="third7"> 19 توقف </option>
+                                        <option value="third8"> 20 توقف </option>
+                                        <option value="third9"> 21 توقف </option>
+                                        <option value="third10"> 22 توقف </option>
+                                        <option value="third11"> 23 توقف </option>
+                                        <option value="third12"> 24 توقف </option>
+                                        <option value="third13"> 25 توقف </option>
+                                    </select>
+                                </div>
+                                <div className="flex flex-col md:w-[200px] gap-3">
+                                    <label htmlFor="select3"> ظرفیت کابین </label>
+                                    <select id="select3" value={selectedCapacity} onChange={handleCapacityChange} className="bg-gray-100 text-black border-blue-400 outline-0 border rounded-md p-1">
+                                        {!selectedCategory ? (
+                                            <option value="">--</option>
+                                        ) : (
+                                            options2[selectedCategory as keyof typeof options2].map((option) => (
+                                                <option key={option} value={option}>
+                                                    {option}
+                                                </option>
+                                            ))
+                                        )}
+                                    </select>
+                                </div>
+                                <div className="flex flex-col md:w-[200px] gap-3">
+                                    <label htmlFor="select2"> سرعت </label>
+                                    <select id="select2" value={selectedSpeed} onChange={handleSpeedChange} className="bg-gray-100 text-black border-blue-400 outline-0 border rounded-md p-1">
+                                        {!selectedCategory ? (
+                                            <option value="">--</option>
+                                        ) : (
+                                            options[selectedCategory as keyof typeof options].map((option) => (
+                                                <option key={option} value={option}>
+                                                    {option}
+                                                </option>
+                                            ))
+                                        )}
+                                    </select>
+                                </div>
+                                <div>
+                                    <p className='text-sm'> :motor power </p>
+                                    <p className='text-blue-400'>
+                                        {power1 ? '3' : ''}{power2 ? '3' : ''}{power3 ? '4' : ''}{power4 ? '6' : ''}{power5 ? '9.2' : ''}{power6 ? '11' : ''}{power7 ? '13' : ''}{power8 ? '15' : ''}
+                                        {power9 ? '4' : ''}{power10 ? '4' : ''}{power11 ? '4' : ''}{power12 ? '7' : ''}{power13 ? '13' : ''}{power14 ? '17' : ''}{power15 ? '21' : ''}{power16 ? '23' : ''}
+                                        {power17 ? '3' : ''}{power18 ? '4' : ''}{power19 ? '6' : ''}{power20 ? '11' : ''}{power21 ? '11' : ''}{power22 ? '13' : ''}{power23 ? '15' : ''}
+                                        {power24 ? '3' : ''}{power25 ? '4' : ''}{power26 ? '6' : ''}{power27 ? '11' : ''}{power28 ? '11' : ''}{power29 ? '15' : ''}{power30 ? '15' : ''}
+                                        {power31 ? '7' : ''}{power32 ? '15' : ''}{power33 ? '17' : ''}{power34 ? '21' : ''}{power35 ? '25' : ''}
+                                        {power36 ? '7' : ''}{power37 ? '13' : ''}{power38 ? '15' : ''}{power39 ? '19' : ''}{power40 ? '23' : ''}
+                                        {power41 ? '7' : ''}{power42 ? '15' : ''}{power43 ? '19' : ''}{power44 ? '25' : ''}{power45 ? '27' : ''}
+                                        {power46 ? '19' : ''}{power47 ? '19' : ''}{power48 ? '25' : ''}{power49 ? '27' : ''}
+                                        {Spower1 ? '4' : ''}{Spower2 ? '4' : ''}{Spower3 ? '6' : ''}{Spower4 ? '7' : ''}{Spower5 ? '13' : ''}{Spower6 ? '17' : ''}{Spower7 ? '21' : ''}{Spower8 ? '23' : ''}
+                                        {Spower9 ? '4' : ''}{Spower10 ? '4' : ''}{Spower11 ? '7' : ''}{Spower12 ? '15' : ''}{Spower13 ? '17' : ''}{Spower14 ? '21' : ''}{Spower15 ? '23' : ''}
+                                        {Spower16 ? '7' : ''}{Spower17 ? '17' : ''}{Spower18 ? '19' : ''}{Spower19 ? '25' : ''}{Spower20 ? '27' : ''}
+                                        kw
+                                    </p>
+                                </div>
                             </div>
-                            <div className="flex flex-col md:w-[200px] gap-3">
-                                <label htmlFor="select2"> سرعت </label>
-                                <select id="select2" value={selectedSpeed} onChange={handleSpeedChange} className="bg-gray-100 text-black border-blue-400 outline-0 border rounded-md p-1">
-                                    {!selectedCategory ? (
-                                        <option value="">--</option>
-                                    ) : (
-                                        options[selectedCategory as keyof typeof options].map((option) => (
-                                            <option key={option} value={option}>
-                                                {option}
-                                            </option>
-                                        ))
-                                    )}
-                                </select>
-                            </div>
-                            <div>
-                                <p className='text-sm'> :motor power </p>
-                                <p className='text-blue-400'>
-                                    {power1 ? '3' : ''}{power2 ? '3' : ''}{power3 ? '4' : ''}{power4 ? '6' : ''}{power5 ? '9.2' : ''}{power6 ? '11' : ''}{power7 ? '13' : ''}{power8 ? '15' : ''}
-                                    {power9 ? '4' : ''}{power10 ? '4' : ''}{power11 ? '4' : ''}{power12 ? '7' : ''}{power13 ? '13' : ''}{power14 ? '17' : ''}{power15 ? '21' : ''}{power16 ? '23' : ''}
-                                    {power17 ? '3' : ''}{power18 ? '4' : ''}{power19 ? '6' : ''}{power20 ? '11' : ''}{power21 ? '11' : ''}{power22 ? '13' : ''}{power23 ? '15' : ''}
-                                    {power24 ? '3' : ''}{power25 ? '4' : ''}{power26 ? '6' : ''}{power27 ? '11' : ''}{power28 ? '11' : ''}{power29 ? '15' : ''}{power30 ? '15' : ''}
-                                    {power31 ? '7' : ''}{power32 ? '15' : ''}{power33 ? '17' : ''}{power34 ? '21' : ''}{power35 ? '25' : ''}
-                                    {power36 ? '7' : ''}{power37 ? '13' : ''}{power38 ? '15' : ''}{power39 ? '19' : ''}{power40 ? '23' : ''}
-                                    {power41 ? '7' : ''}{power42 ? '15' : ''}{power43 ? '19' : ''}{power44 ? '25' : ''}{power45 ? '27' : ''}
-                                    {power46 ? '19' : ''}{power47 ? '19' : ''}{power48 ? '25' : ''}{power49 ? '27' : ''}
-                                    {Spower1 ? '4' : ''}{Spower2 ? '4' : ''}{Spower3 ? '6' : ''}{Spower4 ? '7' : ''}{Spower5 ? '13' : ''}{Spower6 ? '17' : ''}{Spower7 ? '21' : ''}{Spower8 ? '23' : ''}
-                                    {Spower9 ? '4' : ''}{Spower10 ? '4' : ''}{Spower11 ? '7' : ''}{Spower12 ? '15' : ''}{Spower13 ? '17' : ''}{Spower14 ? '21' : ''}{Spower15 ? '23' : ''}
-                                    {Spower16 ? '7' : ''}{Spower17 ? '17' : ''}{Spower18 ? '19' : ''}{Spower19 ? '25' : ''}{Spower20 ? '27' : ''}
-                                    kw
-                                </p>
-                            </div>
-                        </div>
+                        )}
                         <div className='flex flex-row text-blue-400 gap-2'>
                             <input id='toggleCheckbox' type="checkbox" onChange={handleCheckboxChange} />
                             <label htmlFor="toggleCheckbox">ظرفیت کابین خود را نمیدانم !</label>
@@ -468,55 +486,93 @@ export default function Stage1({ setPageState }: Stage1Props) {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='flex flex-col gap-5'>
-                                    <p> ظرفیت کابین شما <span className='text-blue-400'> {status} نفر </span>  میباشد! </p>
-                                    <div className='flex flex-row gap-10'>
-                                        <div className="flex flex-col md:w-[200px] gap-3">
-                                            <label htmlFor="select1"> تعداد توقف </label>
-                                            <select id="select1" value={selectedCategory} onChange={handleCategoryChange} className="bg-gray-100 text-black border-blue-400 outline-0 border rounded-md p-1">
-                                                <option value="">--</option>
-                                                <option value="first1"> 2 توقف  </option>
-                                                <option value="first2"> 3 توقف </option>
-                                                <option value="first3"> 4 توقف </option>
-                                                <option value="first4"> 5 توقف </option>
-                                                <option value="second1"> 6 توقف </option>
-                                                <option value="second2"> 7 توقف </option>
-                                                <option value="second3"> 8 توقف </option>
-                                                <option value="second4"> 9 توقف </option>
-                                                <option value="second5"> 10 توقف </option>
-                                                <option value="second6"> 11 توقف </option>
-                                                <option value="second7"> 12 توقف </option>
-                                                <option value="third1"> 13 توقف </option>
-                                                <option value="third2"> 14 توقف </option>
-                                                <option value="third3"> 15 توقف </option>
-                                                <option value="third4"> 16 توقف </option>
-                                                <option value="third5"> 17 توقف </option>
-                                                <option value="third6"> 18 توقف </option>
-                                                <option value="third7"> 19 توقف </option>
-                                                <option value="third8"> 20 توقف </option>
-                                                <option value="third9"> 21 توقف </option>
-                                                <option value="third10"> 22 توقف </option>
-                                                <option value="third11"> 23 توقف </option>
-                                                <option value="third12"> 24 توقف </option>
-                                                <option value="third13"> 25 توقف </option>
-                                            </select>
+                                <div className='flex flex-col gap-5 pt-10'>
+                                    {status === 'error' && (
+                                        <p className='text-red-400'>اطلاعات وارد شده نادرست یا غیراستاندارد میباشد</p>
+                                    )}
+                                    {status !== 'error' && status !== '' &&(
+                                        <div className='flex flex-col gap-5'>
+                                            <p className='text-blue-400'>ظرفیت استاندارد کابین شما {status} میباشد</p>
+                                            <p> لذا پس از مشخص کردن تعداد توقف، ظرفیت کابین خود را روی <span className='text-blue-400'> {status} نفر </span> قرار دهید </p>
+                                            <div className="flex flex-col 2xl:flex-row gap-10  justify-between">
+                                                <div className="flex flex-col md:w-[200px] gap-3">
+                                                    <label htmlFor="select1"> تعداد توقف </label>
+                                                    <select id="select1" value={selectedCategory} onChange={handleCategoryChange} className="bg-gray-100 text-black border-blue-400 outline-0 border rounded-md p-1">
+                                                        <option value="">--</option>
+                                                        <option value="first1"> 2 توقف  </option>
+                                                        <option value="first2"> 3 توقف </option>
+                                                        <option value="first3"> 4 توقف </option>
+                                                        <option value="first4"> 5 توقف </option>
+                                                        <option value="second1"> 6 توقف </option>
+                                                        <option value="second2"> 7 توقف </option>
+                                                        <option value="second3"> 8 توقف </option>
+                                                        <option value="second4"> 9 توقف </option>
+                                                        <option value="second5"> 10 توقف </option>
+                                                        <option value="second6"> 11 توقف </option>
+                                                        <option value="second7"> 12 توقف </option>
+                                                        <option value="third1"> 13 توقف </option>
+                                                        <option value="third2"> 14 توقف </option>
+                                                        <option value="third3"> 15 توقف </option>
+                                                        <option value="third4"> 16 توقف </option>
+                                                        <option value="third5"> 17 توقف </option>
+                                                        <option value="third6"> 18 توقف </option>
+                                                        <option value="third7"> 19 توقف </option>
+                                                        <option value="third8"> 20 توقف </option>
+                                                        <option value="third9"> 21 توقف </option>
+                                                        <option value="third10"> 22 توقف </option>
+                                                        <option value="third11"> 23 توقف </option>
+                                                        <option value="third12"> 24 توقف </option>
+                                                        <option value="third13"> 25 توقف </option>
+                                                    </select>
+                                                </div>
+                                                <div className="flex flex-col md:w-[200px] gap-3">
+                                                    <label htmlFor="select3"> ظرفیت کابین </label>
+                                                    <select id="select3" value={selectedCapacity} onChange={handleCapacityChange} className="bg-gray-100 text-black border-blue-400 outline-0 border rounded-md p-1">
+                                                        {!selectedCategory ? (
+                                                            <option value="">--</option>
+                                                        ) : (
+                                                            options2[selectedCategory as keyof typeof options2].map((option) => (
+                                                                <option key={option} value={option}>
+                                                                    {option}
+                                                                </option>
+                                                            ))
+                                                        )}
+                                                    </select>
+                                                </div>
+                                                <div className="flex flex-col md:w-[200px] gap-3">
+                                                    <label htmlFor="select2"> سرعت </label>
+                                                    <select id="select2" value={selectedSpeed} onChange={handleSpeedChange} className="bg-gray-100 text-black border-blue-400 outline-0 border rounded-md p-1">
+                                                        {!selectedCategory ? (
+                                                            <option value="">--</option>
+                                                        ) : (
+                                                            options[selectedCategory as keyof typeof options].map((option) => (
+                                                                <option key={option} value={option}>
+                                                                    {option}
+                                                                </option>
+                                                            ))
+                                                        )}
+                                                    </select>
+                                                </div>
+                                                <div>
+                                                    <p className='text-sm'> :motor power </p>
+                                                    <p className='text-blue-400'>
+                                                        {power1 ? '3' : ''}{power2 ? '3' : ''}{power3 ? '4' : ''}{power4 ? '6' : ''}{power5 ? '9.2' : ''}{power6 ? '11' : ''}{power7 ? '13' : ''}{power8 ? '15' : ''}
+                                                        {power9 ? '4' : ''}{power10 ? '4' : ''}{power11 ? '4' : ''}{power12 ? '7' : ''}{power13 ? '13' : ''}{power14 ? '17' : ''}{power15 ? '21' : ''}{power16 ? '23' : ''}
+                                                        {power17 ? '3' : ''}{power18 ? '4' : ''}{power19 ? '6' : ''}{power20 ? '11' : ''}{power21 ? '11' : ''}{power22 ? '13' : ''}{power23 ? '15' : ''}
+                                                        {power24 ? '3' : ''}{power25 ? '4' : ''}{power26 ? '6' : ''}{power27 ? '11' : ''}{power28 ? '11' : ''}{power29 ? '15' : ''}{power30 ? '15' : ''}
+                                                        {power31 ? '7' : ''}{power32 ? '15' : ''}{power33 ? '17' : ''}{power34 ? '21' : ''}{power35 ? '25' : ''}
+                                                        {power36 ? '7' : ''}{power37 ? '13' : ''}{power38 ? '15' : ''}{power39 ? '19' : ''}{power40 ? '23' : ''}
+                                                        {power41 ? '7' : ''}{power42 ? '15' : ''}{power43 ? '19' : ''}{power44 ? '25' : ''}{power45 ? '27' : ''}
+                                                        {power46 ? '19' : ''}{power47 ? '19' : ''}{power48 ? '25' : ''}{power49 ? '27' : ''}
+                                                        {Spower1 ? '4' : ''}{Spower2 ? '4' : ''}{Spower3 ? '6' : ''}{Spower4 ? '7' : ''}{Spower5 ? '13' : ''}{Spower6 ? '17' : ''}{Spower7 ? '21' : ''}{Spower8 ? '23' : ''}
+                                                        {Spower9 ? '4' : ''}{Spower10 ? '4' : ''}{Spower11 ? '7' : ''}{Spower12 ? '15' : ''}{Spower13 ? '17' : ''}{Spower14 ? '21' : ''}{Spower15 ? '23' : ''}
+                                                        {Spower16 ? '7' : ''}{Spower17 ? '17' : ''}{Spower18 ? '19' : ''}{Spower19 ? '25' : ''}{Spower20 ? '27' : ''}
+                                                        kw
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div className="flex flex-col md:w-[200px] gap-3">
-                                            <label htmlFor="select2"> سرعت </label>
-                                            <select id="select2" value={selectedSpeed} onChange={handleSpeedChange} className="bg-gray-100 text-black border-blue-400 outline-0 border rounded-md p-1">
-                                                {!selectedCategory ? (
-                                                    <option value="">--</option>
-                                                ) : (
-                                                    options[selectedCategory as keyof typeof options].map((option) => (
-                                                        <option key={option} value={option}>
-                                                            {option}
-                                                        </option>
-                                                    ))
-                                                )}
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <p className='text-sm'> بعد از انتخاب تعداد توقف و سرعت به مرحله بعدی بروید.  </p>
+                                    )}
                                 </div>
                             </div>
                         )}

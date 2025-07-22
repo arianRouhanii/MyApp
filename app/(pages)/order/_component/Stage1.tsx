@@ -1,9 +1,8 @@
 interface Stage1Props {
     setPageState: (page: number) => void;
 }
-import { stat } from 'fs';
 import Image from 'next/image';
-import React, { useState, useEffect, useRef, use } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 export default function Stage1({ setPageState }: Stage1Props) {
     const [selectedCategory, setSelectedCategory] = useState<string>('')
@@ -252,7 +251,7 @@ export default function Stage1({ setPageState }: Stage1Props) {
     const [check1, setCheck1] = useState(false)
     const [check2, setCheck2] = useState(false)
     const [check3, setCheck3] = useState(false)
-    const [status, setStatus] = useState<''| 'error' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12' | '13' | '14' | '15' | '16' | '17' | '18' | '19' | '20'>('');
+    const [status, setStatus] = useState<'' | 'error' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12' | '13' | '14' | '15' | '16' | '17' | '18' | '19' | '20'>('');
     const handleInput1Change = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInput1(e.target.value === '' ? '' : parseFloat(e.target.value))
     }
@@ -345,7 +344,7 @@ export default function Stage1({ setPageState }: Stage1Props) {
             setStatus('19')
         } else if (finalResult >= 31300 && finalResult < 34000) {
             setStatus('20')
-        } else if (finalResult <= 0 ) {
+        } else if (finalResult <= 0) {
             setStatus('')
         } else {
             setStatus('error')
@@ -490,7 +489,7 @@ export default function Stage1({ setPageState }: Stage1Props) {
                                     {status === 'error' && (
                                         <p className='text-red-400'>اطلاعات وارد شده نادرست یا غیراستاندارد میباشد</p>
                                     )}
-                                    {status !== 'error' && status !== '' &&(
+                                    {status !== 'error' && status !== '' && (
                                         <div className='flex flex-col gap-5'>
                                             <p className='text-blue-400'>ظرفیت استاندارد کابین شما {status} میباشد</p>
                                             <p> لذا پس از مشخص کردن تعداد توقف، ظرفیت کابین خود را روی <span className='text-blue-400'> {status} نفر </span> قرار دهید </p>
